@@ -120,4 +120,65 @@ def companions():
 </svg>"""
 
 
-SCENES = {"companions": companions}
+def tree(x, base, fill="#050d10"):
+    """Yaprakları sarkan yaşlı ağaç silueti."""
+    r = random.Random(3)
+    leaves = "".join(
+        f'<ellipse cx="{x + r.uniform(-170, 190):.0f}" cy="{base - r.uniform(330, 520):.0f}" '
+        f'rx="{r.uniform(50, 95):.0f}" ry="{r.uniform(30, 55):.0f}"/>' for _ in range(26))
+    drapes = "".join(
+        f'<path d="M{x+dx} {base-400} q {r.uniform(-8,8):.0f} 90 {r.uniform(-4,4):.0f} {r.uniform(150,230):.0f}" '
+        f'stroke="{fill}" stroke-width="{r.uniform(1.5,3):.1f}" fill="none"/>' for dx in range(-170, 200, 22))
+    return f"""<g fill="{fill}">
+<path d="M{x-28} {base} C{x-22} {base-120} {x-40} {base-220} {x-10} {base-330} L{x+18} {base-330}
+ C{x+20} {base-230} {x+30} {base-120} {x+40} {base} Z"/>
+<path d="M{x-5} {base-280} C{x-60} {base-330} {x-110} {base-360} {x-150} {base-400} L{x-140} {base-410}
+ C{x-90} {base-380} {x-40} {base-350} {x+5} {base-305} Z"/>
+<path d="M{x+10} {base-300} C{x+70} {base-340} {x+120} {base-380} {x+160} {base-420} L{x+170} {base-410}
+ C{x+130} {base-360} {x+80} {base-320} {x+20} {base-270} Z"/>
+{leaves}</g>{drapes}"""
+
+
+def reflection():
+    """Hadis: kardeşini günahıyla ayıplama. Alacakaranlıkta durgun suya bakıp kendi aksini gören kişi."""
+    shore = 930
+    pond_top, pond_bot = 950, 1150
+    fig_x = 430
+    fig = figure(fig_x, shore, 1)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+{sky(seed=21, top="#0a1b2b", mid="#2a3f4c", glow="#e59a55")}
+<defs>
+ <clipPath id="pond"><ellipse cx="560" cy="1030" rx="640" ry="112"/></clipPath>
+ <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#3b4c52"/><stop offset=".5" stop-color="#1b2d35"/><stop offset="1" stop-color="#0b171c"/>
+ </linearGradient>
+</defs>
+<path d="M0 820 C 180 760 320 790 470 770 C 640 745 820 800 1080 760 V{shore} H0 Z" fill="#14262d"/>
+<path d="M0 880 C 220 850 420 880 620 860 C 800 845 950 870 1080 850 V{shore} H0 Z" fill="#0c1b20"/>
+<rect x="0" y="{shore}" width="{W}" height="{H-shore}" fill="#060f12"/>
+<g clip-path="url(#pond)">
+ <rect x="0" y="{shore}" width="{W}" height="{pond_bot-shore+60}" fill="url(#water)"/>
+ <g transform="translate(0 {2*shore}) scale(1 -1)" opacity=".42">
+  <path d="M0 820 C 180 760 320 790 470 770 C 640 745 820 800 1080 760 V{shore} H0 Z" fill="#14262d"/>
+  <circle cx="690" cy="432" r="0"/>
+ </g>
+ <g transform="translate(0 {2*shore+10}) scale(1 -1)" opacity=".35">{fig}</g>
+ <ellipse cx="690" cy="975" rx="46" ry="9" fill="#f6e3b4" opacity=".55"/><g stroke="#f6e3b4" stroke-width="3" opacity=".35"><path d="M660 995 h60"/><path d="M670 1012 h40"/><path d="M678 1028 h24"/></g>
+ <g stroke="#e9c97a" stroke-width="2" opacity=".35" fill="none">
+  <path d="M520 1010 q 40 -6 80 0"/><path d="M640 1045 q 60 -8 120 0"/><path d="M380 1075 q 70 -8 140 0"/>
+  <path d="M600 1100 q 50 -6 100 0"/><path d="M250 1040 q 40 -5 80 0"/><path d="M820 1010 q 40 -5 80 0"/>
+ </g>
+</g>
+<path d="M0 {shore+6} C 120 {shore-14} 260 {shore-8} 360 {shore+2} C 420 {shore+8} 470 {shore+2} 520 {shore+10}
+ L 520 {shore+24} C 380 {shore+30} 200 {shore+40} 0 {shore+50} Z" fill="#040b0d"/>
+<path d="M330 {shore+4} C 360 {shore-34} 470 {shore-38} 520 {shore+8} Z" fill="#040b0d"/>
+{tree(170, shore+20)}
+{fig}
+<g fill="#040b0d">
+ <path d="M880 {shore+10} l6 -60 l4 60 Z"/><path d="M900 {shore+10} l-8 -80 l14 80 Z"/><path d="M920 {shore+10} l10 -55 l-2 55 Z"/>
+ <path d="M60 {shore+30} l4 -50 l6 50 Z"/><path d="M90 {shore+30} l-6 -70 l12 70 Z"/>
+</g>
+</svg>"""
+
+
+SCENES = {"companions": companions, "reflection": reflection}

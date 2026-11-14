@@ -1,0 +1,12 @@
+{
+ "type": "hadis",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مَنْ عَيَّرَ أَخَاهُ بِذَنْبٍ لَمْ يَمُتْ حَتَّى يَعْمَلَهُ",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “Kim (din) kardeşini, (işlemiş olduğu) bir günah sebebiyle ayıplarsa kendisi, o günahı işlemeden ölmez.”",
+ "source": "Sünen-i Tirmizî",
+ "ar_size": 58,
+ "tr_size": 40,
+ "slides": [
+  {"kind": "cover", "scene": "reflection", "title": "Kardeşini ayıplama", "subtitle": "Önce kendi aynana bak", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
