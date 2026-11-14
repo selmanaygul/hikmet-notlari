@@ -21,6 +21,7 @@ Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer: zum
 | 001 | En hayırlı dost | companions | zumrut | gece |
 | 002 | Kardeşini ayıplama | reflection | zumrut | gol |
 | 003 | Kabr-i şerif ziyareti | medina | seher | guvercin |
+| 004 | Evladına Kur’ân öğretmek | teaching | toprak | yagmur |
 
 ## Fotoğraflı kapak (Unsplash)
 Kapak slaytında `"kind": "photo"` kullanılır: `photo` (photos/ altındaki dosya), `title`, `subtitle`, `credit` ("Fotoğraf: Ad Soyad / Unsplash"), isteğe bağlı `focus` (ör. "center 30%"). Fotoğraflar `images.unsplash.com`'dan indirilir; bu adres `hikmet-notlari` bulut ortamında izinlidir.

@@ -1,0 +1,15 @@
+{
+ "type": "hadis",
+ "palette": "toprak",
+ "ambient": "yagmur",
+ "hicri": "01 Cemâziyelâhir 1448",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مَنْ عَلَّمَ وَلَدًا لَهُ الْقُرْآنَ قَلَّدَهُ اللهُ قِلَادَةً يُعْجِبُ مِنْهَا الْأَوَّلُونَ وَالْآخِرُونَ يَوْمَ الْقِيَامَةِ",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “Çocuğuna Kur’ân-ı Kerîm öğreten kimseye, Allâhü Teâlâ, kıyamet günü bir gerdanlık takar ki önceki ve sonrakilerin (mahşer halkının) tamamı, bu gerdanlıktan dolayı ona gıpta ederler.”",
+ "source": "Süyûtî, Câmiu’l-Ehâdîs",
+ "ar_size": 52,
+ "tr_size": 37,
+ "slides": [
+  {"kind": "cover", "scene": "teaching", "title": "Evladına Kur’ân öğret", "subtitle": "Mahşerde gıpta edilen gerdanlık", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}

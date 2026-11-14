@@ -294,3 +294,89 @@ def medina():
 
 
 SCENES["medina"] = medina
+
+
+def _child(x, base, facing=-1, s=0.64):
+    """Diz çöküp oturan çocuk: küçültülmüş oturan figür, sarık yerine beyaz takke."""
+    g = figure(x, base, facing).replace('fill="#d8ccb2"', 'fill="#eee6d2"').replace('stroke="#a8987a"', 'stroke="#eee6d2"')
+    return f'<g transform="translate({x} {base}) scale({s}) translate({-x} {-base})">{g}</g>'
+
+
+def _necklace(cx, y, half, sag, n=23):
+    """Işıktan gerdanlık: sarkan inci dizisi ve ortada sekiz köşeli yıldız."""
+    pts = []
+    for i in range(n):
+        t = i / (n - 1) * 2 - 1
+        px, py = cx + t * half, y + sag * (1 - t * t)
+        r = 5.5 if i % 2 else 7.5
+        pts.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r}" fill="#fff1c9"/>')
+    star = ('M0 -30 L8 -10 L28 -14 L14 2 L22 22 L0 12 L-22 22 L-14 2 L-28 -14 L-8 -10 Z')
+    return f"""
+<g opacity=".9">
+ <path d="M{cx-half} {y} Q{cx} {y+2*sag} {cx+half} {y}" fill="none" stroke="#f2c98a" stroke-width="1.6" opacity=".6"/>
+ <g filter="url(#bloom)">{''.join(pts)}</g>
+ <g transform="translate({cx} {y+sag+34})"><path d="M0 -34 V-14" stroke="#f2c98a" stroke-width="2"/>
+  <circle r="58" fill="url(#lamp)" opacity=".8"/><path d="{star}" fill="#ffe3a3" filter="url(#bloom)"/></g>
+</g>"""
+
+
+def teaching():
+    """Hadis: evladına Kur'ân öğretmek. Yağmurlu gece, kemerli pencere önünde rahle başında baba ve çocuk; üstlerinde nurdan gerdanlık."""
+    floor = 1090
+    r = random.Random(11)
+    win_x, win_top, win_w = 540, 470, 330
+    win_bot = 900
+    stars = "".join(f'<circle cx="{r.uniform(win_x-win_w/2, win_x+win_w/2):.0f}" cy="{r.uniform(win_top, 760):.0f}" '
+                    f'r="{r.choice([1, 1.3, 1.8]):.1f}" fill="#f5e6c4" opacity="{r.uniform(.3, .8):.2f}"/>' for _ in range(28))
+    rain = "".join(f'<path d="M{r.uniform(win_x-win_w/2, win_x+win_w/2):.0f} {r.uniform(win_top, win_bot):.0f} l-7 34" />'
+                   for _ in range(60))
+    arch = (f'M{win_x-win_w/2} {win_bot} V{win_top+150} '
+            f'Q{win_x-win_w/2} {win_top} {win_x} {win_top-40} Q{win_x+win_w/2} {win_top} {win_x+win_w/2} {win_top+150} V{win_bot} Z')
+    rug = "".join(f'<path d="M{150+i*30} {floor+6} L{110+i*36} {floor+150}" stroke="#7a2e22" stroke-width="2" opacity=".35"/>'
+                  for i in range(26))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<defs>
+ <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#140b07"/><stop offset=".55" stop-color="#2c1a10"/><stop offset="1" stop-color="#3a2314"/>
+ </linearGradient>
+ <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#0a1626"/><stop offset="1" stop-color="#1d3140"/>
+ </linearGradient>
+ <radialGradient id="lamp" cx=".5" cy=".5" r=".5">
+  <stop offset="0" stop-color="#ffd58a" stop-opacity=".95"/><stop offset=".25" stop-color="#f0a948" stop-opacity=".45"/>
+  <stop offset="1" stop-color="#f0a948" stop-opacity="0"/>
+ </radialGradient>
+ <radialGradient id="warm" cx=".5" cy=".78" r=".6">
+  <stop offset="0" stop-color="#f0a948" stop-opacity=".38"/><stop offset="1" stop-color="#f0a948" stop-opacity="0"/>
+ </radialGradient>
+ <clipPath id="win"><path d="{arch}"/></clipPath>
+ <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+ <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="{W}" height="{H}" fill="url(#wall)"/>
+<g clip-path="url(#win)">
+ <rect x="0" y="0" width="{W}" height="{H}" fill="url(#night)"/>{stars}
+ <path d="M612 560 a34 34 0 1 0 22 52 a28 28 0 1 1 -22 -52 Z" fill="#f6e3b4" opacity=".9"/>
+ {mosque(540, 905, 0.5, "#0b1824")}
+ <g stroke="#cfe0ea" stroke-width="1.6" opacity=".22">{rain}</g>
+</g>
+<path d="{arch}" fill="none" stroke="#5a3a22" stroke-width="22"/>
+<path d="{arch}" fill="none" stroke="#c9a45c" stroke-width="2" opacity=".55"/>
+<path d="M{win_x} {win_top-40} V{win_bot} M{win_x-win_w/2} 700 H{win_x+win_w/2}" stroke="#3a2416" stroke-width="7"/>
+<rect x="{win_x-win_w/2-34}" y="{win_bot}" width="{win_w+68}" height="18" fill="#4a2f1c"/>
+<rect width="{W}" height="{H}" fill="url(#warm)"/>
+<rect x="0" y="{floor}" width="{W}" height="{H-floor}" fill="#1a0f09"/>
+<path d="M150 {floor+6} H930 L990 {floor+150} H90 Z" fill="#5a1e18"/>
+{rug}
+<path d="M150 {floor+6} H930 L990 {floor+150} H90 Z M170 {floor+16} H910 L962 {floor+140} H118 Z" fill="none" stroke="#d9a35a" stroke-width="2.5" opacity=".6"/>
+{_necklace(540, 640, 300, 120)}
+{lantern(150, floor+20)}
+{figure(345, floor+30, 1, fill="#0a0503")}
+{_child(770, floor+30, -1)}
+{rahle_book(560, floor+40)}
+<circle cx="560" cy="{floor-26}" r="70" fill="url(#lamp)" opacity=".55"/>
+</svg>"""
+
+
+SCENES["teaching"] = teaching
