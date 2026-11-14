@@ -1,0 +1,20 @@
+{
+ "type": "hadis",
+ "arabic": "قِيلَ: يَا رَسُولَ اللهِ أَيُّ جُلَسَائِنَا خَيْرٌ؟ قَالَ: مَنْ يُذَكِّرُكُمُ اللهَ رُؤْيَتُهُ، وَزَادَ فِي عَمَلِكُمْ مَنْطِقُهُ، وَذَكَّرَكُمُ الْآخِرَةَ عَمَلُهُ",
+ "turkish": "Resûlullah (s.a.v.) Efendimize, “Yâ Resûlallah! Arkadaşlıkta bulunduğumuz kişilerin en hayırlısı kimdir?” diye suâl olundu. “Kendisini görmeniz, size, Allâhü Teâlâ’yı hatırlatan; konuşması, amellerinizin ziyadeleşmesine vesile olan ve amelleri de size âhireti hatırlatan kimsedir” buyurdular.",
+ "source": "Beyhakî, Şuabü’l-Îmân",
+ "ar_size": 54,
+ "tr_size": 37,
+ "slides": [
+  {
+   "kind": "cover",
+   "scene": "companions",
+   "title": "En hayırlı dost kimdir?",
+   "subtitle": "Resûlullah (s.a.v.) üç vasıfla tarif buyurdu",
+   "swipe": "Hadis-i şerifi okumak için kaydır  →"
+  },
+  {
+   "kind": "text"
+  }
+ ]
+}
