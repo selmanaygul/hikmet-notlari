@@ -12,6 +12,36 @@ THEMES = {
     "ilmihal": {"label": "İLMİHÂL · HANEFÎ", "bg1": "#33201a", "bg2": "#1b100c"},
 }
 
+# Renk paletleri: her gönderi posts/<id>.json içinde "palette" ile kendi rengini seçer.
+# bg1/bg2: zemin, accent: altın/vurgu, accent2: desen, text: metin, shade: kapak üst gölgesi
+PALETTES = {
+    "zumrut":   {"bg1": "#0d2b2f", "bg2": "#071a1d", "accent": "#c9a45c", "accent2": "#e9c97a", "text": "#efe4c8", "shade": "#071820"},
+    "gece":     {"bg1": "#10263f", "bg2": "#081526", "accent": "#c9a45c", "accent2": "#e9c97a", "text": "#efe4c8", "shade": "#081526"},
+    "seher":    {"bg1": "#3e2436", "bg2": "#1e1019", "accent": "#e3b48c", "accent2": "#f2c9a6", "text": "#f6e6dc", "shade": "#24152a"},
+    "bordo":    {"bg1": "#3d1420", "bg2": "#1f0a10", "accent": "#d9b26a", "accent2": "#ecc988", "text": "#f3e3cf", "shade": "#1f0a10"},
+    "erguvan":  {"bg1": "#2c1d3a", "bg2": "#150e1e", "accent": "#d4b37a", "accent2": "#e6cc98", "text": "#efe4d6", "shade": "#150e1e"},
+    "firuze":   {"bg1": "#0f3b42", "bg2": "#06201f", "accent": "#e6c27a", "accent2": "#9fd8d2", "text": "#eaf2ec", "shade": "#06201f"},
+    "toprak":   {"bg1": "#36221a", "bg2": "#1b100c", "accent": "#d8a866", "accent2": "#eec48a", "text": "#f1e4d2", "shade": "#1b100c"},
+    "zeytin":   {"bg1": "#2c301a", "bg2": "#15170c", "accent": "#d6c07a", "accent2": "#e8d79a", "text": "#f0ecd6", "shade": "#15170c"},
+    "lacivert": {"bg1": "#16244a", "bg2": "#0a1128", "accent": "#c9d2e3", "accent2": "#dfe6f2", "text": "#eef1f7", "shade": "#0a1128"},
+}
+DEFAULT_PALETTE = {"hadis": "zumrut", "ayet": "gece", "dua": "erguvan", "ilmihal": "toprak"}
+
+
+def _rgb(h):
+    h = h.lstrip("#"); return ",".join(str(int(h[i:i+2], 16)) for i in (0, 2, 4))
+
+
+def recolor(doc, post):
+    """Şablondaki varsayılan (zümrüt) renkleri gönderinin paletiyle değiştirir."""
+    p = PALETTES[post.get("palette") or DEFAULT_PALETTE[post["type"]]]
+    for old, new in [("#c9a45c", p["accent"]), ("rgba(201,164,92,", f"rgba({_rgb(p['accent'])},"),
+                     ("#e9c97a", p["accent2"]), ("#efe4c8", p["text"]), ("#071820", p["shade"]),
+                     ("#0d2b2f", p["bg1"]), ("#071a1d", p["bg2"]), ("#10263f", p["bg1"]), ("#081526", p["bg2"]),
+                     ("#2a1d36", p["bg1"]), ("#160f1e", p["bg2"]), ("#33201a", p["bg1"]), ("#1b100c", p["bg2"])]:
+        doc = doc.replace(old, new)
+    return doc
+
 STAR = "M50 0 L61.8 21.5 L85.4 14.6 L78.5 38.2 L100 50 L78.5 61.8 L85.4 85.4 L61.8 78.5 L50 100 L38.2 78.5 L14.6 85.4 L21.5 61.8 L0 50 L21.5 38.2 L14.6 14.6 L38.2 21.5 Z"
 
 def star(x, y, s, fill="none", stroke="#c9a45c", sw=1.2):
@@ -115,6 +145,7 @@ def main(pid):
     for i, sl in enumerate(slides, 1):
         name = pid if len(slides) == 1 else f"{pid}-{i}"
         doc = build_cover(post, sl) if sl["kind"] == "cover" else build({**post, **sl})
+        doc = recolor(doc, post)
         h = ROOT / "templates" / f"{name}.html"
         h.write_text(doc)
         out = ROOT / "cards" / f"{name}.jpg"

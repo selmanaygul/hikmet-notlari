@@ -182,3 +182,115 @@ def reflection():
 
 
 SCENES = {"companions": companions, "reflection": reflection}
+
+
+# ---------------- Medine: seher vakti Mescid-i Nebevî ----------------
+def _medina_minaret(x, base, h, fill):
+    top = base - h
+    w = 26
+    parts = [f'<rect x="{x-w/2}" y="{top}" width="{w}" height="{h}"/>']
+    for k, f in enumerate((0.38, 0.62, 0.82)):
+        y = base - h * f
+        parts.append(f'<rect x="{x-w/2-9}" y="{y}" width="{w+18}" height="7"/>')
+        parts.append(f'<rect x="{x-w/2-7}" y="{y-14}" width="{w+14}" height="2.5"/>')
+        for dx in range(-int(w/2)-6, int(w/2)+8, 7):
+            parts.append(f'<rect x="{x+dx}" y="{y-14}" width="2" height="14"/>')
+    parts.append(f'<rect x="{x-9}" y="{top-60}" width="18" height="60"/>')
+    parts.append(f'<path d="M{x-14} {top-58} C{x-16} {top-90} {x+16} {top-90} {x+14} {top-58} Z"/>')
+    parts.append(f'<path d="M{x-6} {top-84} L{x} {top-120} L{x+6} {top-84} Z"/>')
+    parts.append(f'<path d="M{x} {top-136} a8 8 0 1 0 6 12 a6 6 0 1 1 -6 -12 Z" fill="#e9c97a"/>')
+    return f'<g fill="{fill}">{"".join(parts)}</g>'
+
+
+def _umbrella(x, base, w, h, lit="#f4e4d0", shade="#c9a99a", pole="#3a2a34"):
+    top = base - h
+    hw = w / 2
+    scallop = " ".join(f"Q{x-hw+w*(i+0.5)/6:.0f} {top+52} {x-hw+w*(i+1)/6:.0f} {top+40}" for i in range(6))
+    return (f'<rect x="{x-4}" y="{top+20}" width="8" height="{h-20}" fill="{pole}"/>'
+            f'<path d="M{x-hw} {top+40} L{x} {top} L{x+hw} {top+40} {scallop} Z" fill="{lit}"/>'
+            f'<path d="M{x} {top} L{x+hw} {top+40} Q{x+hw*0.84:.0f} {top+52} {x+hw*0.67:.0f} {top+40} Z" fill="{shade}" opacity=".7"/>'
+            f'<path d="M{x} {top} L{x-hw*0.33:.0f} {top+44} M{x} {top} L{x+hw*0.33:.0f} {top+44}" stroke="{shade}" stroke-width="2"/>')
+
+
+def _palm(x, base, h, fill="#2a1a28", lean=0.0):
+    tx, ty = x + lean * h, base - h
+    trunk = f'<path d="M{x-9} {base} Q{x+lean*h*0.4-6:.0f} {base-h*0.5:.0f} {tx-4:.0f} {ty} L{tx+4:.0f} {ty} Q{x+lean*h*0.4+6:.0f} {base-h*0.5:.0f} {x+9} {base} Z"/>'
+    fronds = ""
+    for ang, ln in [(-160, 120), (-130, 135), (-95, 110), (-60, 135), (-25, 120), (-195, 95), (10, 95)]:
+        import math
+        a = math.radians(ang)
+        ex, ey = tx + ln * math.cos(a), ty + ln * math.sin(a) + 40
+        mx, my = tx + ln * 0.55 * math.cos(a), ty + ln * 0.55 * math.sin(a) - 18
+        fronds += (f'<path d="M{tx:.0f} {ty} Q{mx:.0f} {my:.0f} {ex:.0f} {ey:.0f} '
+                   f'Q{mx+4:.0f} {my+34:.0f} {tx:.0f} {ty+10} Z"/>')
+    return f'<g fill="{fill}">{trunk}{fronds}</g>'
+
+
+def _dove(x, y, s, fill="#2b1d2e", flap=0):
+    up = -10 if flap else 6
+    return (f'<path transform="translate({x} {y}) scale({s})" fill="{fill}" '
+            f'd="M-22 {up} Q-11 -8 0 2 Q11 -8 22 {up} Q12 -2 0 8 Q-12 -2 -22 {up} Z"/>')
+
+
+def medina():
+    """Hadis: kabr-i şerif ziyareti. Seher vakti Mescid-i Nebevî, Kubbe-i Hadrâ, şemsiyeler ve güvercinler."""
+    r = random.Random(33)
+    stars = "".join(f'<circle cx="{r.uniform(40, W-40):.0f}" cy="{r.uniform(30, 300):.0f}" r="{r.choice([1, 1.3, 1.8])}" '
+                    f'fill="#fff4ea" opacity="{r.uniform(.25, .7):.2f}"/>' for _ in range(40))
+    base = 900
+    bld = "#3a2433"
+    # Mescid gövdesi: kemerli uzun cephe ve çatıdaki küçük kubbeler
+    arches = "".join(f'<path d="M{x} {base} v-62 a17 17 0 0 1 34 0 v62 Z" fill="#f2c08e" opacity=".42"/>'
+                     for x in range(60, 1040, 52))
+    small_domes = "".join(f'<path d="M{x-26} {base-118} a26 22 0 0 1 52 0 Z" fill="#4a3040"/>' for x in range(90, 1010, 74))
+    # Kubbe-i Hadrâ (Yeşil Kubbe)
+    gx, gy = 470, base - 150
+    green = (f'<rect x="{gx-78}" y="{gy-60}" width="156" height="62" fill="#2d6b4c"/>'
+             + "".join(f'<rect x="{gx-62+k*26}" y="{gy-48}" width="10" height="28" rx="5" fill="#173d2c"/>' for k in range(5))
+             + f'<path d="M{gx-92} {gy-58} C{gx-92} {gy-170} {gx-30} {gy-215} {gx} {gy-240} '
+               f'C{gx+30} {gy-215} {gx+92} {gy-170} {gx+92} {gy-58} Z" fill="url(#greendome)"/>'
+             + "".join(f'<path d="M{gx+dx} {gy-60} Q{gx+dx*0.55:.0f} {gy-180} {gx} {gy-238}" stroke="#a5d9b8" stroke-width="2" fill="none" opacity=".35"/>'
+                       for dx in (-60, -30, 30, 60))
+             + f'<rect x="{gx-2}" y="{gy-290}" width="4" height="52" fill="#e9c97a"/>'
+             + f'<circle cx="{gx}" cy="{gy-262}" r="7" fill="#e9c97a"/>'
+             + f'<path d="M{gx} {gy-318} a14 14 0 1 0 10 22 a11 11 0 1 1 -10 -22 Z" fill="#e9c97a"/>')
+    doves = "".join(_dove(x, y, s, flap=f) for x, y, s, f in
+                    [(700, 470, 1.0, 0), (760, 430, .8, 1), (820, 480, .9, 1), (650, 520, .7, 1),
+                     (880, 420, .6, 0), (590, 455, .55, 0), (930, 500, .5, 1)])
+    umbrellas = "".join(_umbrella(x, 1130, w, h) for x, w, h in [(150, 250, 230), (420, 270, 250), (700, 270, 250), (960, 250, 230)])
+    tiles = "".join(f'<path d="M540 960 L{x} 1350" stroke="#f4e4d0" stroke-width="1.2" opacity=".06"/>' for x in range(-600, 1700, 150))
+    rows = "".join(f'<path d="M0 {y} H1080" stroke="#f4e4d0" stroke-width="1" opacity=".12"/>' for y in (990, 1035, 1095, 1170, 1265))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<defs>
+ <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1f2140"/><stop offset=".35" stop-color="#5a3a5e"/>
+  <stop offset=".55" stop-color="#b8708a"/><stop offset=".68" stop-color="#f0b48a"/><stop offset=".75" stop-color="#f7d6a8"/>
+ </linearGradient>
+ <radialGradient id="sun" cx=".62" cy=".64" r=".35"><stop offset="0" stop-color="#ffe7bf" stop-opacity=".9"/><stop offset="1" stop-color="#ffe7bf" stop-opacity="0"/></radialGradient>
+ <linearGradient id="greendome" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#1f5a3c"/><stop offset=".55" stop-color="#3d9a68"/><stop offset="1" stop-color="#2a7350"/>
+ </linearGradient>
+ <linearGradient id="court" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#8a6070"/><stop offset=".4" stop-color="#4a2f40"/><stop offset="1" stop-color="#1e1019"/>
+ </linearGradient>
+</defs>
+<rect width="{W}" height="{H}" fill="url(#dawn)"/>
+<rect width="{W}" height="{H}" fill="url(#sun)"/>
+{stars}
+{_medina_minaret(130, base-110, 420, bld)}{_medina_minaret(880, base-110, 470, bld)}
+{_medina_minaret(330, base-110, 350, "#4a2f40")}{_medina_minaret(1010, base-110, 330, "#4a2f40")}
+<rect x="0" y="{base-120}" width="{W}" height="122" fill="{bld}"/>
+{small_domes}
+{green}
+<rect x="0" y="{base-120}" width="{W}" height="6" fill="#5a3a4c"/>
+{arches}
+{doves}
+<rect x="0" y="{base}" width="{W}" height="{H-base}" fill="url(#court)"/>
+{tiles}{rows}
+{_palm(40, 1000, 380, lean=0.05)}{_palm(1050, 1010, 360, lean=-0.06)}
+{umbrellas}
+<rect x="0" y="1130" width="{W}" height="220" fill="#1e1019" opacity=".55"/>
+</svg>"""
+
+
+SCENES["medina"] = medina

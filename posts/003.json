@@ -1,0 +1,14 @@
+{
+ "type": "hadis",
+ "palette": "seher",
+ "ambient": "guvercin",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مَنْ زَارَ قَبْرِي وَجَبَتْ لَهُ شَفَاعَتِي",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “Kim benim kabrimi ziyaret ederse, ona, şefaatim vacip olur.”",
+ "source": "Beyhakî, Şuabü’l-Îmân",
+ "ar_size": 60,
+ "tr_size": 42,
+ "slides": [
+  {"kind": "cover", "scene": "medina", "title": "Ravza’ya giden yol", "subtitle": "Kabr-i şerif ziyaretinin fazileti", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}

@@ -2,7 +2,7 @@
 """Ortam sesi kütüphanesi (müzik/çalgı yok, tamamen sentez; telif sorunu yok).
 
 Kullanım: python3 audio/ambient.py <ses> <saniye> <çıktı.wav> [tohum]
-Sesler: gece, gol, yagmur, dere, dalga, sabah, ates
+Sesler: gece, gol, yagmur, dere, dalga, sabah, ates, guvercin, cesme, col, yaprak, kis
 Tohum (seed) her gönderide farklı verilirse aynı tür ses bile her seferinde farklı çıkar.
 """
 import sys, wave
@@ -97,6 +97,34 @@ class Gen:
         f = r.uniform(400, 1300) * (1 + 2.5 * t / d)
         return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t / (d / 3))
 
+    @staticmethod
+    def coo(r):
+        """Güvercin ötüşü: 'hu-HUU-hu' (alçak, yumuşak, kaymalı)."""
+        parts = []
+        base = r.uniform(330, 430)
+        for k, (d, rise, amp) in enumerate([(0.22, 1.08, 0.6), (0.48, 1.18, 1.0), (0.30, 0.95, 0.7)][: r.integers(2, 4)]):
+            t = np.arange(int(d * SR)) / SR
+            f = base * (1 + (rise - 1) * np.sin(np.pi * t / d)) * (1 + 0.012 * np.sin(2 * np.pi * 6 * t))
+            ph = 2 * np.pi * np.cumsum(f) / SR
+            tone = np.sin(ph) + 0.35 * np.sin(2 * ph) + 0.12 * np.sin(3 * ph)
+            env = np.sin(np.pi * t / d) ** 1.5
+            parts.append(tone * env * amp)
+            parts.append(np.zeros(int(r.uniform(0.06, 0.14) * SR)))
+        return np.concatenate(parts)
+
+    @staticmethod
+    def flutter(r):
+        """Kanat çırpışı: hızlı, kısa hışırtı darbeleri."""
+        d = r.uniform(0.5, 1.1); n = int(d * SR); t = np.arange(n) / SR
+        rate = r.uniform(9, 14)
+        env = (0.5 + 0.5 * np.sin(2 * np.pi * rate * t)) ** 4 * np.exp(-t / (d * 0.6))
+        return r.standard_normal(n) * env
+
+    @staticmethod
+    def splash(r):
+        d = r.uniform(0.04, 0.15); t = np.arange(int(d * SR)) / SR
+        return r.standard_normal(len(t)) * np.exp(-t / (d / 5))
+
     def crickets(self, f, rate, gain):
         ph = self.r.uniform(0, 6)
         env = (np.sin(2 * np.pi * rate * self.t + ph) > 0.55).astype(float)
@@ -176,7 +204,67 @@ def ates(g):
     return ch
 
 
-SOUNDS = {"gece": gece, "gol": gol, "yagmur": yagmur, "dere": dere, "dalga": dalga, "sabah": sabah, "ates": ates}
+def guvercin(g):
+    """Seher vakti cami avlusu: güvercin ötüşleri, ara sıra kanat çırpışı, uzaktan çeşme, hafif esinti."""
+    ch = []
+    flaps = g.events(0.12, g.flutter, 1.0)
+    for i in range(2):
+        x = 0.18 * g.wind(120, 900, 9)
+        x += g.events(0.55, g.coo, 0.45)
+        x += 0.10 * norm(band(g.noise(), 1500, 7000)) * (0.8 + 0.2 * g.slow(1.3))
+        x += norm(band(flaps, 300, 4000)) * 0.35 if np.abs(flaps).max() > 0 else 0
+        ch.append(x)
+    return ch
+
+
+def cesme(g):
+    """Avlu çeşmesi: sürekli şırıltı ve sıçrayan damlalar."""
+    ch = []
+    for _ in range(2):
+        jitter = 0.75 + 0.25 * smooth(g.r.random(g.n), 0.015) * 2
+        x = 0.45 * norm(band(g.noise(), 700, 7000)) * jitter
+        x += 0.2 * norm(band(g.noise(), 150, 600))
+        x += g.events(14, g.splash, 0.25) + g.events(4, g.drop, 0.25)
+        ch.append(x)
+    return ch
+
+
+def col(g):
+    """Çöl rüzgârı: ıslıklı, savrulan kum hışırtısı."""
+    ch = []
+    for _ in range(2):
+        f = 520 + 160 * np.sin(2 * np.pi * g.t / g.r.uniform(5, 8)) + 60 * np.sin(2 * np.pi * g.t / 2.1)
+        whistle = np.sin(2 * np.pi * np.cumsum(f) / SR) * g.slow(6, 0.8) * 0.12
+        sand = norm(band(g.noise(), 3000, 12000)) * g.slow(4.5, 0.7) * 0.25
+        x = 0.6 * g.wind(100, 1200, 6) + whistle + sand
+        ch.append(x)
+    return ch
+
+
+def yaprak(g):
+    """Rüzgârda hışırdayan yapraklar ve uzak kuşlar."""
+    ch = []
+    for _ in range(2):
+        gust = g.slow(5, 0.85) * g.slow(2.2, 0.4)
+        rustle = norm(band(g.noise(), 2000, 9000)) * gust * (0.6 + 0.4 * smooth(g.r.random(g.n), 0.02) * 2)
+        x = 0.45 * rustle + 0.25 * g.wind(80, 500, 7) + g.events(0.4, g.chirp_bird, 0.12)
+        ch.append(x)
+    return ch
+
+
+def kis(g):
+    """Kış gecesi: uğuldayan rüzgâr, uzaktan ıslık."""
+    ch = []
+    for _ in range(2):
+        f = 300 + 140 * np.sin(2 * np.pi * g.t / g.r.uniform(6, 9)) + 40 * np.sin(2 * np.pi * g.t / 1.7)
+        howl = np.sin(2 * np.pi * np.cumsum(f) / SR) * g.slow(7, 0.9) * 0.18
+        x = 0.7 * g.wind(50, 450, 8) + howl + 0.15 * norm(band(g.noise(), 1500, 5000)) * g.slow(5, 0.8)
+        ch.append(x)
+    return ch
+
+
+SOUNDS = {"gece": gece, "gol": gol, "yagmur": yagmur, "dere": dere, "dalga": dalga, "sabah": sabah, "ates": ates,
+          "guvercin": guvercin, "cesme": cesme, "col": col, "yaprak": yaprak, "kis": kis}
 
 
 def make(name, dur, out, seed=0):

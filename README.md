@@ -11,3 +11,13 @@
 - `make_reel_audio.sh <id>` → `reels/<id>-sesli.mp4` (gönderideki `ambient` sesiyle)
 - `audio/ambient.py` — ortam sesi kütüphanesi: gece, gol, yagmur, dere, dalga, sabah, ates (sentez, müziksiz)
 - `audio/ornekler/` — her sesin 12 sn'lik örneği
+
+## Renk paletleri
+Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer: zumrut, gece, seher, bordo, erguvan, firuze, toprak, zeytin, lacivert.
+
+## Gönderi geçmişi
+| No | Konu | Sahne | Palet | Ses |
+|---|---|---|---|---|
+| 001 | En hayırlı dost | companions | zumrut | gece |
+| 002 | Kardeşini ayıplama | reflection | zumrut | gol |
+| 003 | Kabr-i şerif ziyareti | medina | seher | guvercin |
