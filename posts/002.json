@@ -6,7 +6,16 @@
  "ar_size": 58,
  "tr_size": 40,
  "slides": [
-  {"kind": "cover", "scene": "reflection", "title": "Kardeşini ayıplama", "subtitle": "Önce kendi aynana bak", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
-  {"kind": "text"}
- ]
+  {
+   "kind": "cover",
+   "scene": "reflection",
+   "title": "Kardeşini ayıplama",
+   "subtitle": "Önce kendi aynana bak",
+   "swipe": "Hadis-i şerifi okumak için kaydır  →"
+  },
+  {
+   "kind": "text"
+  }
+ ],
+ "ambient": "gol"
 }

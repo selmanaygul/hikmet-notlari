@@ -8,3 +8,6 @@
 - `cards/` — Instagram'ın çektiği, herkese açık JPEG'ler
 
 - `make_reel.sh <id>` → `reels/<id>.mp4` (1080×1920 Reels videosu)
+- `make_reel_audio.sh <id>` → `reels/<id>-sesli.mp4` (gönderideki `ambient` sesiyle)
+- `audio/ambient.py` — ortam sesi kütüphanesi: gece, gol, yagmur, dere, dalga, sabah, ates (sentez, müziksiz)
+- `audio/ornekler/` — her sesin 12 sn'lik örneği
