@@ -1,0 +1,24 @@
+{
+ "type": "hadis",
+ "palette": "zeytin",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: أَكْرِمُوا الْخُبْزَ فَإِنَّهُ مِنْ بَرَكَاتِ السَّمَاءِ وَالْأَرْضِ، مَنْ أَكَلَ مَا سَقَطَ مِنَ السُّفْرَةِ غُفِرَ لَهُ",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “Ekmeğe hürmet ediniz. Muhakkak o, semanın ve yerin bereketindendir. Sofradan dökülen yemek ve ekmek kırıntılarını yiyen kimsenin günahları mağfiret olunur.”",
+ "source": "Süyûtî, el-Câmiu’s-Sağîr",
+ "ar_size": 52,
+ "tr_size": 37,
+ "slides": [
+  {
+   "kind": "photo",
+   "photo": "photos/005-ekmek.jpg",
+   "title": "Ekmeğe hürmet",
+   "subtitle": "Semanın ve yerin bereketi",
+   "credit": "Fotoğraf: Victoria Shes / Unsplash",
+   "focus": "center 55%",
+   "swipe": "Hadis-i şerifi okumak için kaydır  →"
+  },
+  {
+   "kind": "text"
+  }
+ ],
+ "ambient": "ates"
+}

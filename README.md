@@ -23,6 +23,7 @@ Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer: zum
 | 002 | Kardeşini ayıplama | reflection | zumrut | gol |
 | 003 | Kabr-i şerif ziyareti | medina | seher | guvercin |
 | 004 | Hac ve umre yapanlar Allah'ın misafirleri | foto: Kâbe tavafı (Unsplash) | toprak | çöl rüzgârı (Freesound, CC0) |
+| 005 | Ekmeğe hürmet | foto: ekmek ve başaklar (Unsplash) | zeytin | ates |
 
 ## Fotoğraflı kapak (Unsplash)
 Kapak slaytında `"kind": "photo"` kullanılır: `photo` (photos/ altındaki dosya), `title`, `subtitle`, `credit` ("Fotoğraf: Ad Soyad / Unsplash"), isteğe bağlı `focus` (ör. "center 30%"). Fotoğraflar `images.unsplash.com`'dan indirilir; bu adres `hikmet-notlari` bulut ortamında izinlidir.
