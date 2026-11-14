@@ -101,7 +101,7 @@ html,body{{width:{W}px;height:{H}px;overflow:hidden;background:#06100f;position:
 
 JS = """
 const {chromium}=require('playwright');
-(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350},deviceScaleFactor:1});
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:+(process.argv[4]||1080),height:+(process.argv[5]||1350)},deviceScaleFactor:1});
 await p.goto('file://'+process.argv[2]);await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(300);
 const o=await p.evaluate(()=>{const c=document.querySelector('.content');return !!c && c.scrollHeight>c.clientHeight+2});
 await p.screenshot({path:process.argv[3],type:'jpeg',quality:92});await b.close();if(o)console.log('UYARI: metin taşıyor');})();
