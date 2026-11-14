@@ -69,3 +69,9 @@ js = ROOT / "templates" / "shot.js"; js.parent.mkdir(exist_ok=True); js.write_te
 for n, v in enumerate([v1, v2, v3], 1):
     h = ROOT / "templates" / f"profil-{n}.html"; h.write_text(page(v))
     subprocess.run(["node", str(js), str(h), str(ROOT / "profile" / f"profil-{n}.jpg"), "1080", "1080"], check=True)
+
+# Seçilen: 1 numara, koyu lacivert
+NAVY_BG = "radial-gradient(circle at 50% 45%, #16294d 0%, #0b1733 70%, #060e22 100%)"
+v1_navy = v1.replace('fill="#0b2a2c"', 'fill="#0d1b3a"')
+h = ROOT / "templates" / "profil-secilen.html"; h.write_text(page(v1_navy, NAVY_BG))
+subprocess.run(["node", str(js), str(h), str(ROOT / "profile" / "profil-secilen.jpg"), "1080", "1080"], check=True)
