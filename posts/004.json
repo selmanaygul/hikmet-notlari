@@ -9,7 +9,17 @@
  "ar_size": 52,
  "tr_size": 37,
  "slides": [
-  {"kind": "cover", "scene": "teaching", "title": "Evladına Kur’ân öğret", "subtitle": "Mahşerde gıpta edilen gerdanlık", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
-  {"kind": "text"}
+  {
+   "kind": "photo",
+   "photo": "photos/004-kuran-cocuk.jpg",
+   "focus": "center 62%",
+   "title": "Evladına Kur’ân öğret",
+   "subtitle": "Mahşerde gıpta edilen gerdanlık",
+   "swipe": "Hadis-i şerifi okumak için kaydır  →",
+   "credit": "Fotoğraf: Serhat Tuğ / Unsplash"
+  },
+  {
+   "kind": "text"
+  }
  ]
 }
