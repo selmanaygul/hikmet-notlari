@@ -129,6 +129,46 @@ html,body{{width:{W}px;height:{H}px;overflow:hidden;background:#06100f;position:
 <div class="bottom">@HIKMET_NOTLARI</div>
 </body></html>"""
 
+def build_photo(post, slide):
+    """Fotoğraflı kapak: tam ekran fotoğraf, okunurluk için gölge, altın çerçeve, başlık ve fotoğraf künyesi."""
+    t = THEMES[post["type"]]
+    img = (ROOT / slide["photo"]).resolve()
+    title = html.escape(slide["title"])
+    sub = html.escape(slide.get("subtitle", ""))
+    credit = html.escape(slide.get("credit", ""))
+    pos = slide.get("focus", "center")
+    W, H = 1080, 1350
+    corners = "".join(star(x, y, 46) for x, y in [(37, 37), (W-83, 37), (37, H-83), (W-83, H-83)])
+    return f"""<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="{ROOT}/fonts/fonts.css">
+<style>
+*{{margin:0;padding:0;box-sizing:border-box}}
+html,body{{width:{W}px;height:{H}px;overflow:hidden;background:#071820;position:relative}}
+.photo{{position:absolute;inset:0;background:url('file://{img}') {pos}/cover no-repeat;filter:saturate(.92) contrast(1.03)}}
+.tint{{position:absolute;inset:0;background:linear-gradient(180deg,#071820e6 0%,#07182099 22%,#07182000 45%,#07182000 62%,#071820cc 84%,#071820f2 100%)}}
+.frame{{position:absolute;inset:60px;border:1.5px solid #c9a45c}}
+.frame2{{position:absolute;inset:72px;border:.8px solid rgba(201,164,92,.55)}}
+.orn{{position:absolute}}
+.top{{position:absolute;top:150px;left:120px;right:120px;text-align:center}}
+.label{{font:600 20px 'Inter';letter-spacing:.32em;color:#c9a45c;display:flex;align-items:center;justify-content:center;gap:22px;margin-bottom:30px}}
+.label i{{display:block;width:70px;height:1px;background:linear-gradient(90deg,transparent,#c9a45c)}}
+.label i:last-child{{transform:scaleX(-1)}}
+.title{{font:600 84px/1.05 'Cormorant Garamond';color:#f8f0dc;text-shadow:0 2px 24px #000c}}
+.sub{{margin-top:22px;font:italic 500 34px/1.3 'Cormorant Garamond';color:#efdcae;text-shadow:0 1px 12px #000c}}
+.swipe{{position:absolute;bottom:150px;left:0;right:0;text-align:center;font:500 22px 'Inter';letter-spacing:.12em;color:#f3ead6}}
+.bottom{{position:absolute;bottom:96px;left:0;right:0;text-align:center;font:500 19px 'Inter';letter-spacing:.18em;color:rgba(201,164,92,.95)}}
+.credit{{position:absolute;bottom:22px;right:90px;font:400 15px 'Inter';color:#ffffffaa;letter-spacing:.02em}}
+</style></head><body>
+<div class="photo"></div><div class="tint"></div>
+<div class="frame"></div><div class="frame2"></div>{corners}
+<div class="top"><div class="label"><i></i>{t['label']}<i></i></div>
+<div class="title">{title}</div>{'<div class="sub">'+sub+'</div>' if sub else ''}</div>
+<div class="swipe">{html.escape(slide.get("swipe","Kaydır →"))}</div>
+<div class="bottom">@HIKMET_NOTLARI</div>
+{'<div class="credit">'+credit+'</div>' if credit else ''}
+</body></html>"""
+
+
 JS = """
 const {chromium}=require('playwright');
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:+(process.argv[4]||1080),height:+(process.argv[5]||1350)},deviceScaleFactor:1});
@@ -144,7 +184,8 @@ def main(pid):
     slides = post.get("slides") or [{"kind": "text"}]
     for i, sl in enumerate(slides, 1):
         name = pid if len(slides) == 1 else f"{pid}-{i}"
-        doc = build_cover(post, sl) if sl["kind"] == "cover" else build({**post, **sl})
+        doc = (build_cover(post, sl) if sl["kind"] == "cover" else
+               build_photo(post, sl) if sl["kind"] == "photo" else build({**post, **sl}))
         doc = recolor(doc, post)
         h = ROOT / "templates" / f"{name}.html"
         h.write_text(doc)
