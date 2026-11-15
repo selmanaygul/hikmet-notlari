@@ -8,7 +8,8 @@
 - `cards/` — Instagram'ın çektiği, herkese açık JPEG'ler
 
 - `make_reel.sh <id>` → `reels/<id>.mp4` (1080×1920 Reels videosu)
-- `make_reel_audio.sh <id>` → `reels/<id>-sesli.mp4` (gönderideki `ambient` sesiyle)
+- `make_reel_audio.sh <id>` → `reels/<id>-sesli.mp4` (gönderide `music` varsa o parçayla, yoksa `ambient` sesiyle)
+- `audio/muzik/` — Jamendo'dan yalnızca CC BY lisanslı parçalar; kaynaklar `audio/muzik/KAYNAKLAR.md`. Müzik kullanan gönderinin açıklamasına `music.credit` satırı yazılır.
 - `audio/ambient.py` — ortam sesi kütüphanesi: gece, gol, yagmur, dere, dalga, sabah, ates (sentez, müziksiz)
 - `audio/ornekler/` — her sesin 12 sn'lik örneği
 
@@ -20,7 +21,7 @@ Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer: zum
 |---|---|---|---|---|
 | 001 | En hayırlı dost | companions | zumrut | gece |
 | 002 | Kardeşini ayıplama | reflection | zumrut | gol |
-| 003 | Kabr-i şerif ziyareti | medina | seher | guvercin |
+| 003 | Kabr-i şerif ziyareti | medina | seher | Morning Birds (Jamendo, CC BY) |
 
 ## Fotoğraflı kapak (Unsplash)
 Kapak slaytında `"kind": "photo"` kullanılır: `photo` (photos/ altındaki dosya), `title`, `subtitle`, `credit` ("Fotoğraf: Ad Soyad / Unsplash"), isteğe bağlı `focus` (ör. "center 30%"). Fotoğraflar `images.unsplash.com`'dan indirilir; bu adres `hikmet-notlari` bulut ortamında izinlidir.
