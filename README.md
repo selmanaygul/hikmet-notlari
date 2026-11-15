@@ -29,6 +29,7 @@ Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer: zum
 | 007 | Gıyabında kardeşlik | foto: sonbaharda yürüyen iki kişi (Unsplash) | firuze | "Music For Reunion Of Long Friendship" (Jamendo, CC BY) |
 | 008 | Kalbi yumuşatan iki amel | foto: ellerde yemek kâsesi (Unsplash) | bordo | "Deep Study of a Calm Mind" piyano-yaylı (Jamendo, CC BY) |
 | 009 | Hasta ziyareti | foto: torunun büyükannesinin elini tutması (Unsplash) | lacivert | "Diamonds (Early Mix)" gitar-yaylı (Jamendo, CC BY) |
+| 010 | Kardeşini ayıplama (002 yeni haliyle) | foto: alacakaranlıkta durgun göl (Unsplash) | gece | "Reflection" piyano (Jamendo, CC BY) |
 
 ## Fotoğraflı kapak (Unsplash)
 Kapak slaytında `"kind": "photo"` kullanılır: `photo` (photos/ altındaki dosya), `title`, `subtitle`, `credit` ("Fotoğraf: Ad Soyad / Unsplash"), isteğe bağlı `focus` (ör. "center 30%"). Fotoğraflar `images.unsplash.com`'dan indirilir; bu adres `hikmet-notlari` bulut ortamında izinlidir.

@@ -55,6 +55,7 @@ def build(post):
     # **...** arası kalın: tırnak içindeki asıl hadis/ayet cümlesi
     tr = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", html.escape(post["turkish"]), flags=re.S).replace("\n", "<br>")
     src = html.escape(post["source"])
+    date = html.escape(post.get("date", ""))  # ör. hicrî tarih; kaynağın altında küçük yazılır
     ar_size = post.get("ar_size", 44)
     tr_size = post.get("tr_size", 33)
     W, H = 1080, 1350
@@ -81,6 +82,7 @@ body{{background:radial-gradient(ellipse at 50% 40%, {t['bg1']} 0%, {t['bg2']} 1
 .tr{{font:500 {tr_size}px/1.5 'Cormorant Garamond';color:#efe4c8}}
 .tr b{{font-weight:700}}
 .src{{margin-top:36px;font:italic 600 26px 'Cormorant Garamond';color:#c9a45c}}
+.date{{margin-top:14px;font:500 24px 'Cormorant Garamond';font-variant-numeric:lining-nums;letter-spacing:.06em;color:rgba(201,164,92,.8)}}
 .handle{{position:absolute;bottom:92px;left:0;right:0;text-align:center;font:500 19px 'Inter';letter-spacing:.18em;color:rgba(201,164,92,.85)}}
 </style></head><body>
 <svg class="pattern" width="{W}" height="{H}"><defs><pattern id="p" width="90" height="90" patternUnits="userSpaceOnUse">
@@ -93,6 +95,7 @@ body{{background:radial-gradient(ellipse at 50% 40%, {t['bg1']} 0%, {t['bg2']} 1
  {'<div class="ar">'+ar+'</div><div class="div"><i></i><svg viewBox="-4 -4 108 108"><path d="'+STAR+'" fill="#c9a45c"/></svg><i></i></div>' if ar else ''}
  <div class="tr">{tr}</div>
  <div class="src">{src}</div>
+ {'<div class="date">'+date+'</div>' if date else ''}
 </div>
 <div class="handle">@HIKMET_NOTLARI</div>
 </body></html>"""

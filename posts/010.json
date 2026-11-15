@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "gece",
+ "ambient_file": "audio/jamendo/1559902.mp3",
+ "ambient_start": 2,
+ "ambient_credit": "Müzik: “Reflection”, Yakov Golman / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مَنْ عَيَّرَ أَخَاهُ بِذَنْبٍ لَمْ يَمُتْ حَتَّى يَعْمَلَهُ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Kim (din) kardeşini, (işlemiş olduğu) bir günah sebebiyle ayıplarsa kendisi, o günahı işlemeden ölmez.**”",
+ "source": "Sünen-i Tirmizî",
+ "date": "06 Cemâziyelâhir 1448",
+ "ar_size": 58,
+ "tr_size": 40,
+ "slides": [
+  {"kind": "photo", "photo": "photos/010-gol-aksam.jpg", "title": "Kardeşini ayıplama", "subtitle": "Önce kendi aynana bak", "credit": "Fotoğraf: Anatoliy Shostak / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
