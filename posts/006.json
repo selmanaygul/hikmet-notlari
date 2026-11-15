@@ -1,14 +1,26 @@
 {
  "type": "hadis",
  "palette": "erguvan",
- "ambient": "yagmur",
  "arabic": "قَالَ رَسُولُ اللّٰهِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ: يَا سَعْدُ أَطِبْ مَطْعَمَكَ تَكُنْ مُسْتَجَابَ الدَّعْوَةِ، وَالَّذِي نَفْسُ مُحَمَّدٍ بِيَدِهِ إِنَّ الْعَبْدَ لَيَقْذِفُ اللُّقْمَةَ الْحَرَامَ فِي جَوْفِهِ مَا يُتَقَبَّلُ مِنْهُ عَمَلُ أَرْبَعِينَ يَوْمًا",
  "turkish": "Resûlullah Efendimiz (s.a.v.): “Ey Sa’d! Helal rızık ye (haramdan sakın). Böyle yaparsan duan müstecâb (kabul) olur. Muhammed’in nefsi kudretinde olan Allâh’a yemin ederim ki, muhakkak bir kul midesine haram bir lokma götürse kırk gün, ameli (dua ve ibadetleri) kabul olunmaz.” buyurdu.",
  "source": "Taberânî, el-Mu’cemü’l-Evsat",
  "ar_size": 42,
  "tr_size": 33,
  "slides": [
-  {"kind": "photo", "photo": "photos/006-dua.jpg", "title": "Helal lokma, makbul dua", "subtitle": "Duanın kabulünün sırrı", "credit": "Fotoğraf: Defrino Maasy / Unsplash", "focus": "center 70%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
-  {"kind": "text"}
- ]
+  {
+   "kind": "photo",
+   "photo": "photos/006-dua.jpg",
+   "title": "Helal lokma, makbul dua",
+   "subtitle": "Duanın kabulünün sırrı",
+   "credit": "Fotoğraf: Defrino Maasy / Unsplash",
+   "focus": "center 70%",
+   "swipe": "Hadis-i şerifi okumak için kaydır  →"
+  },
+  {
+   "kind": "text"
+  }
+ ],
+ "ambient_file": "audio/jamendo/1687400.mp3",
+ "ambient_start": 8,
+ "ambient_credit": "Müzik: “Les grandes marches”, Ehma / Jamendo (CC BY 3.0)"
 }
