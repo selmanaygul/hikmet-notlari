@@ -44,9 +44,9 @@ Kullanıcı genellikle bir hadis-i şerifin Arapça metnini, Türkçe mealini ve
   3. Türkçe meal
   4. `📖 <Kaynak>`
   5. Kısa bir öğüt cümlesi ve dua (🤲)
-  6. Yorum getirecek bir soru ("... Yorumlarda paylaşın.")
-  7. `📷 Fotoğraf: <Ad> / Unsplash` ve `🎵 Müzik: "<Parça>" – <Sanatçı> / Jamendo (CC BY 3.0)`
-  8. Türkçe etiketler: `#hadis #hadisişerif #hadisler` + konuya özel 3–4 etiket + `#peygamberimiz #sünnet #hikmetnotlari`. `#reels` kullanma.
+  6. `📷 Fotoğraf: <Ad> / Unsplash` ve `🎵 Müzik: "<Parça>" – <Sanatçı> / Jamendo (CC BY 3.0)`
+  7. Türkçe etiketler: `#hadis #hadisişerif #hadisler` + konuya özel 3–4 etiket + `#peygamberimiz #sünnet #hikmetnotlari`. `#reels` kullanma.
+- Açıklamada **yorum isteyen soru cümlesi kullanma** ("… nedir? Yorumlarda paylaşın.", "Siz ne düşünüyorsunuz?", "Dostunu etiketle" gibi). Hesap sahibi bunu istemiyor.
 
 ## Genel
 
