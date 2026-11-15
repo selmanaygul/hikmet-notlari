@@ -1,0 +1,16 @@
+{
+ "type": "hadis",
+ "palette": "bordo",
+ "ambient_file": "audio/jamendo/2326401.mp3",
+ "ambient_start": 2,
+ "ambient_credit": "Müzik: “Deep Study of a Calm Mind”, KonstantinPazuzuStudio / Jamendo (CC BY 3.0)",
+ "arabic": "عَنْ أَبِي هُرَيْرَةَ رَضِىَ اللهُ عَنْهُ :أَنَّ رَجُلًا شَكَا إِلَى رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قَسْوَةَ قَلْبِهِ فَقَالَ لَهُ إِنْ أَرَدْتَ تَلْيِينَ قَلْبِكَ فَأَطْعِمِ الْمِسْكِينَ وَامْسَحْ رَأْسَ الْيَتِيمِ.",
+ "turkish": "Ebû Hüreyre radıyallâhü anh’ten rivâyet olundu: “Bir zât, Resûlullah Efendimiz sallallâhü aleyhi ve sellem’e, kalbinin katılığından şikâyette bulununca o zâta cevaben buyurdular ki: ‘Kalbinin yumuşamasını istiyorsan, fakirlere ikram et ve yetimlerin başını okşa.”",
+ "source": "Müsned-i Ahmed",
+ "ar_size": 52,
+ "tr_size": 38,
+ "slides": [
+  {"kind": "photo", "photo": "photos/008-ikram.jpg", "title": "Kalbi yumuşatan iki amel", "subtitle": "Fakire ikram, yetime şefkat", "credit": "Fotoğraf: Büşra İnce / Unsplash", "focus": "center 60%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
