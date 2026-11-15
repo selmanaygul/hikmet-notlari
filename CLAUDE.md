@@ -21,7 +21,8 @@ Kullanıcı genellikle bir hadis-i şerifin Arapça metnini, Türkçe mealini ve
 - Her reelde **farklı bir görsel**: kapak, Unsplash fotoğrafıdır (`"kind": "photo"`). Unsplash MCP ile ara, `download_asset` ile indir, `photos/<no>-<konu>.jpg` olarak kaydet.
 - Konuya uygun, edepli, İslami hassasiyete aykırı olmayan fotoğraf seç (başka dinlere ait ibadet sahneleri, kadın-erkek yakınlığı vb. olmasın).
 - Kapakta künye: `"credit": "Fotoğraf: <Ad> / Unsplash"`.
-- Her gönderide **daha önce kullanılmamış bir renk paleti** (`"palette"`) seç; README tablosundan kullanılanlara bak. Hepsi kullanıldıysa en uzun süredir kullanılmayanı seç.
+- **Açık renk:** Hesap sahibi açık tonları istiyor; yalnızca **açık paletlerden** seç: `fildisi, kum, nane, gul, gokyuzu, lavanta` (zemin açık, yazılar siyah). Koyu paletleri (zumrut, gece, bordo …) kullanıcı istemedikçe kullanma.
+- Her gönderide açık paletlerden **daha önce kullanılmamış** olanı seç; README tablosundan kullanılanlara bak. Hepsi kullanıldıysa en uzun süredir kullanılmayanı seç.
 
 ## Ses
 

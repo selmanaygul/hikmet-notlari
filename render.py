@@ -24,7 +24,24 @@ PALETTES = {
     "toprak":   {"bg1": "#36221a", "bg2": "#1b100c", "accent": "#d8a866", "accent2": "#eec48a", "text": "#f1e4d2", "shade": "#1b100c"},
     "zeytin":   {"bg1": "#2c301a", "bg2": "#15170c", "accent": "#d6c07a", "accent2": "#e8d79a", "text": "#f0ecd6", "shade": "#15170c"},
     "lacivert": {"bg1": "#16244a", "bg2": "#0a1128", "accent": "#c9d2e3", "accent2": "#dfe6f2", "text": "#eef1f7", "shade": "#0a1128"},
+    # Açık paletler: açık zemin, siyah yazı ("light": True). Süslemeler accent renginde.
+    "fildisi":  {"bg1": "#fdf9ef", "bg2": "#efe4cc", "accent": "#9a7431", "accent2": "#b8955a", "text": "#111111", "shade": "#fbf6ea", "light": True},
+    "kum":      {"bg1": "#fbf3e6", "bg2": "#ead9bd", "accent": "#8a5a2b", "accent2": "#b08455", "text": "#111111", "shade": "#f8efe0", "light": True},
+    "nane":     {"bg1": "#f3faf5", "bg2": "#d7eadf", "accent": "#2f6b55", "accent2": "#5f9a83", "text": "#111111", "shade": "#eef7f1", "light": True},
+    "gul":      {"bg1": "#fdf3f3", "bg2": "#f0d9dc", "accent": "#8e3b4a", "accent2": "#b86f7c", "text": "#111111", "shade": "#fbefef", "light": True},
+    "gokyuzu":  {"bg1": "#f3f7fd", "bg2": "#d9e5f3", "accent": "#2e5486", "accent2": "#6286b4", "text": "#111111", "shade": "#eef4fb", "light": True},
+    "lavanta":  {"bg1": "#f7f4fc", "bg2": "#e2dcef", "accent": "#5b4a86", "accent2": "#8a7bb4", "text": "#111111", "shade": "#f3f0f9", "light": True},
 }
+LIGHT_PALETTES = [k for k, v in PALETTES.items() if v.get("light")]
+
+# Açık paletlerde tüm yazılar siyah; gölgeler kaldırılır.
+LIGHT_CSS = """
+.ar,.tr,.src,.date,.label,.handle,.title,.sub,.swipe,.bottom{color:#111 !important;opacity:1 !important}
+.title,.sub{text-shadow:0 1px 16px rgba(255,255,255,.55) !important}
+.src{font-weight:600 !important}
+.credit{color:#222a !important}
+.pattern{opacity:.10 !important}
+"""
 DEFAULT_PALETTE = {"hadis": "zumrut", "ayet": "gece", "dua": "erguvan", "ilmihal": "toprak"}
 
 
@@ -40,6 +57,8 @@ def recolor(doc, post):
                      ("#0d2b2f", p["bg1"]), ("#071a1d", p["bg2"]), ("#10263f", p["bg1"]), ("#081526", p["bg2"]),
                      ("#2a1d36", p["bg1"]), ("#160f1e", p["bg2"]), ("#33201a", p["bg1"]), ("#1b100c", p["bg2"])]:
         doc = doc.replace(old, new)
+    if p.get("light"):
+        doc = doc.replace("</style>", LIGHT_CSS + "</style>", 1)
     return doc
 
 STAR = "M50 0 L61.8 21.5 L85.4 14.6 L78.5 38.2 L100 50 L78.5 61.8 L85.4 85.4 L61.8 78.5 L50 100 L38.2 78.5 L14.6 85.4 L21.5 61.8 L0 50 L21.5 38.2 L14.6 14.6 L38.2 21.5 Z"

@@ -15,7 +15,7 @@
 - `audio/freesound/` — Freesound'dan indirilen gerçek kayıtlar; gönderide `"ambient_file"` ile seçilir (sentez sesin yerine geçer), künyesi `"ambient_credit"` alanına yazılır
 
 ## Renk paletleri
-Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer: zumrut, gece, seher, bordo, erguvan, firuze, toprak, zeytin, lacivert.
+Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer. Koyu: zumrut, gece, seher, bordo, erguvan, firuze, toprak, zeytin, lacivert. Açık (siyah yazılı, 011 ve sonrası): fildisi, kum, nane, gul, gokyuzu, lavanta.
 
 ## Gönderi geçmişi
 | No | Konu | Sahne | Palet | Ses |
