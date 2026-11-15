@@ -1,0 +1,16 @@
+{
+ "type": "hadis",
+ "palette": "firuze",
+ "ambient_file": "audio/jamendo/1340377.mp3",
+ "ambient_start": 5,
+ "ambient_credit": "Müzik: “Music For Reunion Of Long Friendship”, Ambient Samurai - Ichiro N / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مَنْ نَصَرَ أَخَاهُ بِظَهْرِ الْغَيْبِ نَصَرَهُ اللهُ فِي الدُّنْيَا وَالْآخِرَةِ",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “(Mümin) kardeşine gıyabında yardımcı olan kimseye, Allâhü Teâlâ, dünya ve âhirette yardım eder.”",
+ "source": "Beyhakî, es-Sünenü’l-Kübrâ",
+ "ar_size": 56,
+ "tr_size": 40,
+ "slides": [
+  {"kind": "photo", "photo": "photos/007-kardeslik.jpg", "title": "Gıyabında kardeşlik", "subtitle": "Arkasından sahip çıkana Allah sahip çıkar", "credit": "Fotoğraf: Shaojie / Unsplash", "focus": "center 60%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}

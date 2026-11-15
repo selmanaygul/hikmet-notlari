@@ -1,0 +1,15 @@
+{
+ "type": "hadis",
+ "palette": "toprak",
+ "ambient_file": "audio/freesound/697217.mp3",
+ "ambient_credit": "Ses: “Gentle Wind Ambience on an Open Desert Plain”, dhallcomposer / Freesound (CC0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: اَلْحُجَّاجُ وَالْعُمَّارُ وَفْدُ اللهِ، إِنْ دَعَوْهُ أَجَابَهُمْ، وَإِنِ اسْتَغْفَرُوهُ غَفَرَ لَهُمْ",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “Hac ve umre yapanlar, Allâhü Teâlâ’nın (beytine; Kâbe’ye gelen) elçileridir. Allâhü Teâlâ’ya dua ettiklerinde onlara icâbet eder (dualarını kabul eder), Allâhü Teâlâ’dan mağfiret dilediklerinde onları mağfiret eder.”",
+ "source": "Sünen-i İbn Mâce",
+ "ar_size": 52,
+ "tr_size": 36,
+ "slides": [
+  {"kind": "photo", "photo": "photos/004-kabe-tavaf.jpg", "title": "Allah’ın misafirleri", "subtitle": "Hac ve umre yapanların fazileti", "credit": "Fotoğraf: Khawaja Umer Farooq / Unsplash", "focus": "center 40%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
