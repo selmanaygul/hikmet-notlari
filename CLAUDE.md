@@ -34,6 +34,7 @@ Kullanıcı genellikle bir hadis-i şerifin Arapça metnini, Türkçe mealini ve
 ## Metin ve açıklama
 
 - Kullanıcının verdiği Arapça metni ve meali **değiştirme**. Meal yarım kalmışsa Arapçaya göre tamamla ve kullanıcıya söyle. Kaynak kısaltmalarını açık yaz (ör. (هـ) → Sünen-i İbn Mâce, (هق) → Beyhakî, (طس) → Taberânî, el-Mu’cemü’l-Evsat, (ج) → Süyûtî, el-Câmiu’s-Sağîr); kullanıcı kaynağı yazdıysa onu kullan.
+- **Kalın yazı:** Mealde tırnak içindeki asıl hadis-i şerif cümlesini (ayet-i kerime ise ayetin kendi cümlesini) kalın göster. Gönderi dosyasında `"turkish"` alanında o kısmı `**…**` arasına al (tırnak işaretleri dışarıda kalsın); `render.py` bunu kartta kalın basar. Instagram açıklamasında gerçek kalın yazı yok; açıklamadaki meal düz kalır.
 - Instagram açıklaması şu düzende:
   1. Başlık + konuya uygun emoji
   2. Arapça metin

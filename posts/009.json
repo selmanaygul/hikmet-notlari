@@ -1,0 +1,16 @@
+{
+ "type": "hadis",
+ "palette": "lacivert",
+ "ambient_file": "audio/jamendo/2171562.mp3",
+ "ambient_start": 11,
+ "ambient_credit": "Müzik: “Diamonds (Early Mix)”, Christian Zell / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: عُودُوا الْمَرْضَى وَمُرُوهُمْ فَلْيَدْعُوا لَكُمْ فَإِنَّ دَعْوَةَ الْمَرِيضِ مُسْتَجَابَةٌ وَذَنْبَهُ مَغْفُورٌ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Hastaları ziyaret edin ve sizin için dua etmelerini isteyin. Çünkü hastanın duası makbuldür ve günahı da affolunmuştur.**”",
+ "source": "Taberânî, el-Mu’cemü’l-Evsat",
+ "ar_size": 56,
+ "tr_size": 40,
+ "slides": [
+  {"kind": "photo", "photo": "photos/009-hasta-ziyareti.jpg", "title": "Hasta ziyareti", "subtitle": "Hastanın duası makbuldür", "credit": "Fotoğraf: Marco J Haenssgen / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}

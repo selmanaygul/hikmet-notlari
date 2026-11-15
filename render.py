@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """hikmet_notlari kart üretici: posts/<id>.json -> cards/<id>.jpg (1080x1350)"""
-import json, sys, subprocess, html, pathlib
+import json, sys, subprocess, html, pathlib, re
 from scenes import SCENES
 
 ROOT = pathlib.Path(__file__).resolve().parent
@@ -52,7 +52,8 @@ def star(x, y, s, fill="none", stroke="#c9a45c", sw=1.2):
 def build(post):
     t = THEMES[post["type"]]
     ar = html.escape(post.get("arabic", ""))
-    tr = html.escape(post["turkish"]).replace("\n", "<br>")
+    # **...** arası kalın: tırnak içindeki asıl hadis/ayet cümlesi
+    tr = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", html.escape(post["turkish"]), flags=re.S).replace("\n", "<br>")
     src = html.escape(post["source"])
     ar_size = post.get("ar_size", 44)
     tr_size = post.get("tr_size", 33)
@@ -78,6 +79,7 @@ body{{background:radial-gradient(ellipse at 50% 40%, {t['bg1']} 0%, {t['bg2']} 1
 .div i:last-child{{transform:scaleX(-1)}}
 .div svg{{width:26px;height:26px}}
 .tr{{font:500 {tr_size}px/1.5 'Cormorant Garamond';color:#efe4c8}}
+.tr b{{font-weight:700}}
 .src{{margin-top:36px;font:italic 600 26px 'Cormorant Garamond';color:#c9a45c}}
 .handle{{position:absolute;bottom:92px;left:0;right:0;text-align:center;font:500 19px 'Inter';letter-spacing:.18em;color:rgba(201,164,92,.85)}}
 </style></head><body>
