@@ -31,8 +31,19 @@ PALETTES = {
     "gul":      {"bg1": "#fdf3f3", "bg2": "#f0d9dc", "accent": "#8e3b4a", "accent2": "#b86f7c", "text": "#111111", "shade": "#fbefef", "light": True},
     "gokyuzu":  {"bg1": "#f3f7fd", "bg2": "#d9e5f3", "accent": "#2e5486", "accent2": "#6286b4", "text": "#111111", "shade": "#eef4fb", "light": True},
     "lavanta":  {"bg1": "#f7f4fc", "bg2": "#e2dcef", "accent": "#5b4a86", "accent2": "#8a7bb4", "text": "#111111", "shade": "#f3f0f9", "light": True},
+    # Açık paletli gönderide koyu fotoğraflı kapak için: koyu gölge, krem yazı, altın süs
+    "kapak_koyu": {"bg1": "#14171c", "bg2": "#0b0d10", "accent": "#d4b06a", "accent2": "#e9c97a", "text": "#f3ead6", "shade": "#0b0d10"},
 }
 LIGHT_PALETTES = [k for k, v in PALETTES.items() if v.get("light")]
+
+
+def cover_is_dark(slide):
+    """Kapak fotoğrafı koyu mu? slide["cover"] = "dark"/"light" ile elle seçilebilir; yoksa parlaklık ölçülür."""
+    if slide.get("cover") in ("dark", "light"):
+        return slide["cover"] == "dark"
+    from PIL import Image, ImageStat
+    im = Image.open(ROOT / slide["photo"]).convert("L"); im.thumbnail((200, 200))
+    return ImageStat.Stat(im).mean[0] < 70
 
 # Açık paletlerde tüm yazılar siyah; gölgeler kaldırılır.
 LIGHT_CSS = """
@@ -210,7 +221,10 @@ def main(pid):
         name = pid if len(slides) == 1 else f"{pid}-{i}"
         doc = (build_cover(post, sl) if sl["kind"] == "cover" else
                build_photo(post, sl) if sl["kind"] == "photo" else build({**post, **sl}))
-        doc = recolor(doc, post)
+        if sl["kind"] == "photo" and PALETTES.get(post.get("palette"), {}).get("light") and cover_is_dark(sl):
+            doc = recolor(doc, {**post, "palette": "kapak_koyu"})  # koyu fotoğraf: kapak koyu temada
+        else:
+            doc = recolor(doc, post)
         h = ROOT / "templates" / f"{name}.html"
         h.write_text(doc)
         out = ROOT / "cards" / f"{name}.jpg"

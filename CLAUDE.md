@@ -22,6 +22,7 @@ Kullanıcı genellikle bir hadis-i şerifin Arapça metnini, Türkçe mealini ve
 - Konuya uygun, edepli, İslami hassasiyete aykırı olmayan fotoğraf seç (başka dinlere ait ibadet sahneleri, kadın-erkek yakınlığı vb. olmasın).
 - Kapakta künye: `"credit": "Fotoğraf: <Ad> / Unsplash"`.
 - **Açık renk:** Hesap sahibi açık tonları istiyor; yalnızca **açık paletlerden** seç: `fildisi, kum, nane, gul, gokyuzu, lavanta` (zemin açık, yazılar siyah). Koyu paletleri (zumrut, gece, bordo …) kullanıcı istemedikçe kullanma.
+- **Kapak fotoğrafı koyu olabilir.** Koyu fotoğrafta kapak otomatik olarak koyu temaya geçer (koyu gölge, krem başlık, altın süs); orta/açık fotoğrafta açık tül ve siyah yazı kalır. Hadis metni karesi her zaman açık zemin, siyah yazı. Gerekirse kapak slaytına `"cover": "dark"` veya `"light"` yazarak elle seç.
 - Her gönderide açık paletlerden **daha önce kullanılmamış** olanı seç; README tablosundan kullanılanlara bak. Hepsi kullanıldıysa en uzun süredir kullanılmayanı seç.
 
 ## Ses
