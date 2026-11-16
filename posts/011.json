@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "fildisi",
+ "ambient_file": "audio/jamendo/1196390.mp3",
+ "ambient_start": 12,
+ "ambient_credit": "Müzik: “Morar [classical]”, Hardcore Scm / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مِنَ الْمُرُوءَةِ أَنْ يُنْصِتَ الْأَخُ لِأَخِيهِ إِذَا حَدَّثَهُ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**(Din) kardeşi, kendisine bir şey anlattığı zaman diğer kardeşin sükût etmesi (güzelce dinlemesi) mürüvvetten (kardeşlik hakkına riâyet ve güzel ahlâktan)dır.**”",
+ "source": "Süyûtî, el-Câmiu’s-Sağîr",
+ "date": "16 Kasım 2026\n07 Cemâziyelâhir 1448",
+ "ar_size": 56,
+ "tr_size": 38,
+ "slides": [
+  {"kind": "photo", "photo": "photos/011-dinlemek.jpg", "title": "Kardeşini dinlemek", "subtitle": "Güzelce dinlemek mürüvvettendir", "credit": "Fotoğraf: Ahmet Almaz / Unsplash", "focus": "center 40%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}

@@ -85,7 +85,7 @@ def build(post):
     # **...** arası kalın: tırnak içindeki asıl hadis/ayet cümlesi
     tr = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", html.escape(post["turkish"]), flags=re.S).replace("\n", "<br>")
     src = html.escape(post["source"])
-    date = html.escape(post.get("date", ""))  # ör. hicrî tarih; kaynağın altında küçük yazılır
+    date = html.escape(post.get("date", "")).replace("\n", "<br>")  # ör. miladi + hicrî tarih; kaynağın altında küçük yazılır
     ar_size = post.get("ar_size", 44)
     tr_size = post.get("tr_size", 33)
     W, H = 1080, 1350
