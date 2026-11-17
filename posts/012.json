@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "kum",
+ "ambient_file": "audio/jamendo/2328902.mp3",
+ "ambient_start": 0,
+ "ambient_credit": "Müzik: “Quiet Shroud”, Konstantin Feltman / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: مَنْ حَفِظَ مَا بَيْنَ فُقْمَيْهِ وَفَرْجَهُ دَخَلَ الْجَنَّةَ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Kim (haram ve çirkin sözlerden) ağzını korur, namusunu muhafaza ederse Cennet’e girer.**”",
+ "source": "Müsned-i Ahmed",
+ "date": "17 Kasım 2026\n08 Cemâziyelâhir 1448",
+ "ar_size": 58,
+ "tr_size": 40,
+ "slides": [
+  {"kind": "photo", "photo": "photos/012-bahce-kapisi.jpg", "title": "Dilini ve namusunu koru", "subtitle": "Cennet’in kapısı açılır", "credit": "Fotoğraf: māo jiang / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
