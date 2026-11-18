@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "nane",
+ "ambient_file": "audio/jamendo/341396.mp3",
+ "ambient_start": 5,
+ "ambient_credit": "Müzik: “Un petit poème”, Lena Selyanina / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: قَالَ اللهُ تَعَالَى: يَا عِبَادِي إِنِّي حَرَّمْتُ الظُّلْمَ عَلَى نَفْسِي وَجَعَلْتُهُ بَيْنَكُمْ مُحَرَّمًا فَلَا تَظَالَمُوا.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “Allâhü Teâlâ şöyle buyurdu: “**Ey kullarım! Muhakkak ben, (kullarıma) aslâ zulmetmem, şânım, zulmetmekten uzak ve yücedir. Size de birbirinize zulmetmeyi haram kıldım. Öyleyse siz de birbirinize zulmetmeyiniz.**”",
+ "source": "Sahîh-i Müslim",
+ "date": "18 Kasım 2026\n09 Cemâziyelâhir 1448",
+ "ar_size": 52,
+ "tr_size": 35,
+ "slides": [
+  {"kind": "photo", "photo": "photos/013-terazi.jpg", "title": "Birbirinize zulmetmeyin", "subtitle": "Zulmü Allah haram kıldı", "credit": "Fotoğraf: Eric Prouzet / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
