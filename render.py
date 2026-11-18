@@ -121,7 +121,7 @@ body{{background:radial-gradient(ellipse at 50% 40%, {t['bg1']} 0%, {t['bg2']} 1
 </pattern></defs><rect width="100%" height="100%" fill="url(#p)"/></svg>
 <div class="frame"></div><div class="frame2"></div>{corners}
 <div class="content">
- <div class="label"><i></i>{t['label']}<i></i></div>
+ <div class="label"><i></i>{html.escape(post.get('label') or t['label'])}<i></i></div>
  {'<div class="ar">'+ar+'</div><div class="div"><i></i><svg viewBox="-4 -4 108 108"><path d="'+STAR+'" fill="#c9a45c"/></svg><i></i></div>' if ar else ''}
  <div class="tr">{tr}</div>
  <div class="src">{src}</div>
@@ -158,7 +158,7 @@ html,body{{width:{W}px;height:{H}px;overflow:hidden;background:#06100f;position:
 </style></head><body>
 <div class="scene">{svg}</div><div class="shade"></div>
 <div class="frame"></div><div class="frame2"></div>{corners}
-<div class="top"><div class="label"><i></i>{t['label']}<i></i></div>
+<div class="top"><div class="label"><i></i>{html.escape(post.get('label') or t['label'])}<i></i></div>
 <div class="title">{title}</div>{'<div class="sub">'+sub+'</div>' if sub else ''}</div>
 <div class="swipe">{html.escape(slide.get("swipe","Kaydır →"))}</div>
 <div class="bottom">@HIKMET_NOTLARI</div>
@@ -196,7 +196,7 @@ html,body{{width:{W}px;height:{H}px;overflow:hidden;background:#071820;position:
 </style></head><body>
 <div class="photo"></div><div class="tint"></div>
 <div class="frame"></div><div class="frame2"></div>{corners}
-<div class="top"><div class="label"><i></i>{t['label']}<i></i></div>
+<div class="top"><div class="label"><i></i>{html.escape(post.get('label') or t['label'])}<i></i></div>
 <div class="title">{title}</div>{'<div class="sub">'+sub+'</div>' if sub else ''}</div>
 <div class="swipe">{html.escape(slide.get("swipe","Kaydır →"))}</div>
 <div class="bottom">@HIKMET_NOTLARI</div>

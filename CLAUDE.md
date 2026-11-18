@@ -37,6 +37,7 @@ Kullanıcı genellikle bir hadis-i şerifin Arapça metnini, Türkçe mealini ve
 
 - Kullanıcının verdiği Arapça metni ve meali **değiştirme**. Meal yarım kalmışsa Arapçaya göre tamamla ve kullanıcıya söyle. Kaynak kısaltmalarını açık yaz (ör. (هـ) → Sünen-i İbn Mâce, (هق) → Beyhakî, (طس) → Taberânî, el-Mu’cemü’l-Evsat, (ج) → Süyûtî, el-Câmiu’s-Sağîr); kullanıcı kaynağı yazdıysa onu kullan.
 - **Kalın yazı:** Mealde tırnak içindeki asıl hadis-i şerif cümlesini (ayet-i kerime ise ayetin kendi cümlesini) kalın göster. Gönderi dosyasında `"turkish"` alanında o kısmı `**…**` arasına al (tırnak işaretleri dışarıda kalsın); `render.py` bunu kartta kalın basar. Instagram açıklamasında gerçek kalın yazı yok; açıklamadaki meal düz kalır.
+- **Hadis-i kudsî:** Metin "Allâhü Teâlâ şöyle buyurdu" gibi Allah'ın sözünü naklediyorsa gönderi dosyasına `"label": "HADÎS-İ KUDSÎ"` yaz (kapakta ve metin karesinde bu başlık çıkar), kapaktaki kaydırma yazısını "Hadis-i kudsîyi okumak için kaydır  →" yap ve kalın kısmı Allah'ın sözü olan cümle yap. Açıklamaya `#hadisikudsi` etiketini ekle.
 - **Hicrî tarih:** Kullanıcı mesajın sonunda tarih (ör. "06 Cemâziyelâhir 1448") verirse gönderi dosyasına `"date"` olarak yaz; metin kartında kaynağın altında küçük basılır.
 - Instagram açıklaması şu düzende:
   1. Başlık + konuya uygun emoji
