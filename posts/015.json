@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "gul",
+ "ambient_file": "audio/jamendo/1341661.mp3",
+ "ambient_start": 0,
+ "ambient_credit": "Müzik: “Words Fall Apart (Instrumental Version)”, Josh Woodward / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: دَعْوَةُ الْمَرْءِ الْمُسْلِمِ لِأَخِيهِ بِظَهْرِ الْغَيْبِ مُسْتَجَابَةٌ عِنْدَ رَأْسِهِ مَلَكٌ مُوَكَّلٌ كُلَّمَا دَعَا لِأَخِيهِ بِخَيْرٍ قَالَ الْمَلَكُ الْمُوَكَّلُ بِهِ آمِينَ وَلَكَ بِمِثْلٍ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Müslüman kişinin, din kardeşine gıyâben duası müstecâbdır. Onun başında, vazifeli bir melek vardır. Din kardeşi için hayır duada bulundukça, vazifeli olan melek de ona ‘Âmîn, isteğinin aynısı, senin için de olsun’ der.**”",
+ "source": "Sahîh-i Müslim",
+ "date": "19 Kasım 2026\n10 Cemâziyelâhir 1448",
+ "ar_size": 50,
+ "tr_size": 35,
+ "slides": [
+  {"kind": "photo", "photo": "photos/015-tesbih.jpg", "title": "Kardeşine gıyaben dua", "subtitle": "Melek “Âmîn, sana da” der", "credit": "Fotoğraf: Mustafa akın / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
