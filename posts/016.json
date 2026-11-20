@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "gokyuzu",
+ "ambient_file": "audio/jamendo/710712.mp3",
+ "ambient_start": 1,
+ "ambient_credit": "Müzik: “To The Light”, Keffy Kay / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: إِذَا سَأَلَ أَحَدُكُمُ الرِّزْقَ فَلْيسْأَلِ الْحَلَالَ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Biriniz, (Rabb’inden) rızık istediği zaman, helâlinden istesin.**”",
+ "source": "Süyûtî, el-Câmiu’s-Sağîr",
+ "date": "20 Kasım 2026\n11 Cemâziyelâhir 1448",
+ "ar_size": 60,
+ "tr_size": 42,
+ "slides": [
+  {"kind": "photo", "photo": "photos/016-usta-elleri.jpg", "title": "Rızkı helalinden iste", "subtitle": "Alın teriyle kazanılan bereketlidir", "credit": "Fotoğraf: Gowtham AGM / Unsplash", "focus": "center 40%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
