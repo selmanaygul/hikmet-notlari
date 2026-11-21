@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "lavanta",
+ "ambient_file": "audio/jamendo/941493.mp3",
+ "ambient_start": 1,
+ "ambient_credit": "Müzik: “passagé du vent2012”, Adragante / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: إِنَّ لِكُلِّ شَيْءٍ دِعَامَةً ودِعَامَةُ هٰذَا الدِّينِ الْفِقْهُ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Muhakkak her şeyin bir direği vardır. Bu dinin direği ise fıkıhtır.**”",
+ "source": "Münâvî, Feyzu’l-Kadîr",
+ "date": "21 Kasım 2026\n12 Cemâziyelâhir 1448",
+ "ar_size": 58,
+ "tr_size": 42,
+ "slides": [
+  {"kind": "photo", "photo": "photos/017-hat-albumu.jpg", "title": "Dinin direği fıkıhtır", "subtitle": "İlim, dinin temelidir", "credit": "Fotoğraf: Emre / Unsplash", "focus": "center 55%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}

@@ -36,6 +36,7 @@ Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer. Koy
 | 014 | Birbirinize zulmetmeyin (013, HADÎS-İ KUDSÎ başlığıyla yeniden) | foto: eski bir terazi (Unsplash) | nane | "Un petit poème" piyano-yaylı (Jamendo, CC BY) |
 | 015 | Kardeşine gıyaben dua | foto: elde tesbih (Unsplash) | gul | "Words Fall Apart" piyano (Jamendo, CC BY) |
 | 016 | Rızkı helalinden iste | foto: yaşlı ustanın elleri, tahta çerçeve (Unsplash) | gokyuzu | "To The Light" yaylı (Jamendo, CC BY) |
+| 017 | Dinin direği fıkıhtır | foto: müzede Osmanlı hat albümü (Unsplash) | lavanta | "passagé du vent" arp (Jamendo, CC BY) |
 
 ## Fotoğraflı kapak (Unsplash)
 Kapak slaytında `"kind": "photo"` kullanılır: `photo` (photos/ altındaki dosya), `title`, `subtitle`, `credit` ("Fotoğraf: Ad Soyad / Unsplash"), isteğe bağlı `focus` (ör. "center 30%"). Fotoğraflar `images.unsplash.com`'dan indirilir; bu adres `hikmet-notlari` bulut ortamında izinlidir.
