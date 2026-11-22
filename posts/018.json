@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "fildisi",
+ "ambient_file": "audio/jamendo/1241611.mp3",
+ "ambient_start": 0,
+ "ambient_credit": "Müzik: “nuage”, thomas saliba / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: اَلْإِحْسَانُ أَنْ تَعْبُدَ اللهَ كَأَنَّكَ تَرَاهُ فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**İhsân; Allahü Teâlâ’ya, onu görüyormuş gibi ibadet etmendir. Her ne kadar sen, onu görmesen de o, seni muhakkak görür.**”",
+ "source": "Sahîh-i Buhârî",
+ "date": "22 Kasım 2026\n13 Cemâziyelâhir 1448",
+ "ar_size": 52,
+ "tr_size": 39,
+ "slides": [
+  {"kind": "photo", "photo": "photos/018-cami-isik.jpg", "title": "İhsan", "subtitle": "O seni muhakkak görür", "credit": "Fotoğraf: Osman İçli / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
