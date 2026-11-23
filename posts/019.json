@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "kum",
+ "ambient_file": "audio/jamendo/2193530.mp3",
+ "ambient_start": 3,
+ "ambient_credit": "Müzik: “Dream keeper (dreamy version)”, zero-project / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: أَدِّ مَا افْتَرَضَ اللهُ عَلَيْكَ تَكُنْ مِنْ أَعْبَدِ النَّاسِ وَاجْتَنِبْ مَا حَرَّمَ اللهُ عَلَيْكَ تَكُنْ مِنْ أَوْرَعِ النَّاسِ وَارْضَ بِمَا قَسَمَ اللهُ لَكَ تَكُنْ مِنْ أَغْنَى النَّاسِ.",
+ "turkish": "Resûlullah Efendimiz (s.a.v.) buyurdular: “**Allâh’ın sana farz kıldıklarını edâ et ki insanların en âbidi olasın. Allâh’ın yasak kıldıklarından da sakın ki insanların en verâlısı (ve takvâlısı) olasın. Allâh’ın sana rızık olarak verdiklerine de kanâat et, râzı ol ki insanların en zengini olasın.**”",
+ "source": "Süyûtî, el-Câmiu’s-Sağîr",
+ "date": "23 Kasım 2026\n14 Cemâziyelâhir 1448",
+ "ar_size": 48,
+ "tr_size": 34,
+ "slides": [
+  {"kind": "photo", "photo": "photos/019-tas-denge.jpg", "title": "Üç öğüt", "subtitle": "Farz, takva ve kanaat", "credit": "Fotoğraf: Karsten Winegeart / Unsplash", "focus": "center 5%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
