@@ -39,7 +39,8 @@ Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer. Koy
 | 017 | Dinin direği fıkıhtır | foto: müzede Osmanlı hat albümü (Unsplash) | lavanta | "passagé du vent" arp (Jamendo, CC BY) |
 | 018 | İhsan | foto: camide minber ve pencereden süzülen ışık (Unsplash) | fildisi | "nuage" piyano-keman (Jamendo, CC BY) |
 | 019 | Üç öğüt: farz, takva, kanaat | foto: sisli sahilde dengeli taşlar (Unsplash) | kum | "Dream keeper (dreamy version)" piyano (Jamendo, CC BY) |
-| 020 | Ahir zamanda amel | foto: kitap yanında kum saati (Unsplash) | nane | "Melancholic Piano" piyano-yaylı (Jamendo, CC BY) |
+| 020 | Ahir zamanda amel (paylaşılmadı) | foto: kitap yanında kum saati (Unsplash) | nane | "Melancholic Piano" piyano-yaylı (Jamendo, CC BY) |
+| 021 | Güler yüz, güzel ahlak | foto: avuçta ikram edilen çay, Boğaz (Unsplash) | gul | "Restored Soul" yaylı (Jamendo, CC BY) |
 
 ## Fotoğraflı kapak (Unsplash)
 Kapak slaytında `"kind": "photo"` kullanılır: `photo` (photos/ altındaki dosya), `title`, `subtitle`, `credit` ("Fotoğraf: Ad Soyad / Unsplash"), isteğe bağlı `focus` (ör. "center 30%"). Fotoğraflar `images.unsplash.com`'dan indirilir; bu adres `hikmet-notlari` bulut ortamında izinlidir.

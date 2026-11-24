@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "gul",
+ "ambient_file": "audio/jamendo/489242.mp3",
+ "ambient_start": 1,
+ "ambient_credit": "Müzik: “Restored Soul”, Keffy Kay / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: إِنَّكُمْ لَا تَسَعُونَ النَّاسَ بِأَمْوَالِكُمْ وَلٰكِنْ يَسَعُهُمْ مِنْكُمْ بَسْطُ الْوَجْهِ وَحُسْنُ الْخُلُقِ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Sizin mallarınız, bütün insanları memnun etmeye yetmez. Onları ancak sizin güler yüz ve güzel ahlâkınız memnun eder.**”",
+ "source": "Beyhakî, Şuabü’l-Îmân",
+ "date": "24 Kasım 2026\n15 Cemâziyelâhir 1448",
+ "ar_size": 54,
+ "tr_size": 39,
+ "slides": [
+  {"kind": "photo", "photo": "photos/021-cay-ikram.jpg", "title": "Güler yüz, güzel ahlak", "subtitle": "Gönülleri mal değil, ahlak kazanır", "credit": "Fotoğraf: Muath Alsaeed / Unsplash", "focus": "center 0%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
