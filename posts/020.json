@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "nane",
+ "ambient_file": "audio/jamendo/1476516.mp3",
+ "ambient_start": 0,
+ "ambient_credit": "Müzik: “Melancholic Piano”, Alexander Blu / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: إِنَّكُمْ فِي زَمَانٍ مَنْ تَرَكَ مِنْكُمْ عُشْرَ مَا أُمِرَ بِهِ هَلَكَ ثُمَّ يَأْتِي زَمَانٌ مَنْ عَمِلَ مِنْهُمْ بِعُشْرِ مَا أُمِرَ بِهِ نَجَا.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**(Ey Ashâbım), muhakkak siz öyle bir zamandasınız ki, sizden biriniz, emrolunduğunun onda birini terk etse, helâk olur. Sonra öyle bir zaman gelecek ki, onlardan kim, emrolunduğunun onda biri ile amel etse kurtulur.**”",
+ "source": "Sünen-i Tirmizî",
+ "date": "24 Kasım 2026\n15 Cemâziyelâhir 1448",
+ "ar_size": 52,
+ "tr_size": 35,
+ "slides": [
+  {"kind": "photo", "photo": "photos/020-kum-saati.jpg", "title": "Ahir zamanda amel", "subtitle": "Onda biriyle amel eden kurtulur", "credit": "Fotoğraf: Julian Hochgesang / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
