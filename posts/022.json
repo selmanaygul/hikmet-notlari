@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "gokyuzu",
+ "ambient_file": "audio/jamendo/1265014.mp3",
+ "ambient_start": 0,
+ "ambient_credit": "Müzik: “Peace Within”, Peter Rudenko / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: إِنَّ مِنْ شَرِّ النَّاسِ رَجُلًا فَاجِرًا يَقْرَأُ  كِتَابَ اللهِ لَا يَرْعَوِي إِلَى شَيْءٍ مِنْهُ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Kur’ân-ı Kerîm’i okuyup da onun emirlerine ve yasaklarına uymayan günahkâr kimse muhakkak insanların en şerlilerindendir.**”",
+ "source": "Sünen-i Nesâî",
+ "date": "25 Kasım 2026\n16 Cemâziyelâhir 1448",
+ "ar_size": 54,
+ "tr_size": 39,
+ "slides": [
+  {"kind": "photo", "photo": "photos/022-rahle.jpg", "title": "Okuduğuyla amel etmek", "subtitle": "Kur’ân, yaşamak için okunur", "credit": "Fotoğraf: Masjid MABA / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
