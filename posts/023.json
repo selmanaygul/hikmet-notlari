@@ -1,0 +1,17 @@
+{
+ "type": "hadis",
+ "palette": "lavanta",
+ "ambient_file": "audio/jamendo/1355941.mp3",
+ "ambient_start": 1,
+ "ambient_credit": "Müzik: “Laura”, Lifeless / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مَا أَسْكَرَ كَثِيرُهُ فَقَلِيلُهُ حَرَامٌ.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Çoğu sarhoş eden şeyin, azı da haramdır.**”",
+ "source": "Sünen-i Tirmizî",
+ "date": "26 Kasım 2026\n17 Cemâziyelâhir 1448",
+ "ar_size": 62,
+ "tr_size": 46,
+ "slides": [
+  {"kind": "photo", "photo": "photos/023-berrak-dere.jpg", "title": "Azı da haramdır", "subtitle": "Aklı ve kalbi berrak tut", "credit": "Fotoğraf: Ale / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
