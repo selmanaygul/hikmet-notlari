@@ -45,8 +45,10 @@ Kullanıcı genellikle bir hadis-i şerifin Arapça metnini, Türkçe mealini ve
   3. Türkçe meal
   4. `📖 <Kaynak>`
   5. Kısa bir öğüt cümlesi ve dua (🤲)
-  6. `📷 Fotoğraf: <Ad> / Unsplash` ve `🎵 Müzik: "<Parça>" – <Sanatçı> / Jamendo (CC BY 3.0)`
-  7. Türkçe etiketler: `#hadis #hadisişerif #hadisler` + konuya özel 3–4 etiket + `#peygamberimiz #sünnet #hikmetnotlari`. `#reels` kullanma.
+  6. **İngilizce bölüm** (Türkçe metnin altında, `🇬🇧` ile başlar): başlığın İngilizcesi, mealin sadık İngilizce çevirisi (anlamı değiştirme; parantez içi açıklamaları da çevir), `📖 <Source>` (ör. Sunan al-Tirmidhi, Sahih Muslim, Musnad Ahmad, al-Jami' al-Saghir (al-Suyuti), Shu'ab al-Iman (al-Bayhaqi)), öğüt ve duanın İngilizcesi (🤲). Peygamber Efendimizin adından sonra "ﷺ" kullan. Arapça metni tekrar yazma.
+  7. `📷 Fotoğraf: <Ad> / Unsplash` ve `🎵 Müzik: "<Parça>" – <Sanatçı> / Jamendo (CC BY 3.0)`
+  8. Türkçe etiketler: `#hadis #hadisişerif #hadisler` + konuya özel 3–4 etiket + `#peygamberimiz #sünnet #hikmetnotlari`. `#reels` kullanma.
+- Açıklama 2200 karakteri geçmemeli (Instagram sınırı); uzun hadislerde öğüt cümlesini kısalt.
 - Açıklamada **yorum isteyen soru cümlesi kullanma** ("… nedir? Yorumlarda paylaşın.", "Siz ne düşünüyorsunuz?", "Dostunu etiketle" gibi). Hesap sahibi bunu istemiyor.
 
 ## Genel
