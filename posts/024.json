@@ -1,0 +1,16 @@
+{
+ "type": "hadis",
+ "palette": "fildisi",
+ "ambient_file": "audio/jamendo/1776678.mp3",
+ "ambient_start": 0,
+ "ambient_credit": "Müzik: “Gentle Rain”, Mystichore / Jamendo (CC BY 3.0)",
+ "arabic": "قَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: إِنَّ بُيُوتَ اللهِ فِي الْأَرْضِ الْمَسَاجِدُ وَإِنَّ حَقًّا عَلَى اللهِ أَنْ يُكْرِمَ مَنْ زَارَهُ فِيهَا.",
+ "turkish": "Resûlullah Efendimiz sallallâhü aleyhi ve sellem buyurdular: “**Allâhü Teâlâ’nın (rahmetinin ve meleklerinin inmesi için seçtiği) yeryüzündeki evleri, mescitlerdir. Ve muhakkak ibadet etmek için mescitlere gelen kimseye ikram etmek, Allâhü Teâlâ üzerine haktır.**”",
+ "source": "Taberânî, el-Mu‘cemü’l-Kebîr",
+ "ar_size": 54,
+ "tr_size": 36,
+ "slides": [
+  {"kind": "photo", "photo": "photos/024-cami-kapisi.jpg", "title": "Allah’ın evleri", "subtitle": "Mescide gelen misafire ikram edilir", "credit": "Fotoğraf: Palina Kharlanovich / Unsplash", "focus": "center 50%", "swipe": "Hadis-i şerifi okumak için kaydır  →"},
+  {"kind": "text"}
+ ]
+}
