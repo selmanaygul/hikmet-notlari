@@ -1,0 +1,27 @@
+{
+ "type": "hadis",
+ "palette": "kum",
+ "ambient_file": "audio/jamendo/1375003.mp3",
+ "ambient_start": 0,
+ "ambient_credit": "Müzik: “White Beach”, Christian Petermann / Jamendo (CC BY 3.0)",
+ "arabic": "عَنْ عَبْدِ اللهِ رَضِيَ اللهُ عَنْهُ قَالَ: لَأَنْ أُمَتِّعَ بِسَوْطٍ فِي سَبِيلِ اللهِ أَحَبُّ إِلَيَّ مِنْ أَنْ أَحُجَّ حَجَّةً بَعْدَ حَجَّةٍ.",
+ "turkish": "Abdullah (ibn-i Mes’ûd) radıyallâhü anh’ten rivâyet olundu, o dedi ki: “**Allah yolunda, bir kamçı (gibi kıymetsiz bir şeyi bile) tasadduk etmek, defalarca (nafile) hac yapmaktan bana, elbette daha sevimlidir.**”",
+ "source": "Taberânî, el-Mu‘cemü’l-Kebîr",
+ "date": "27 Kasım 2026\n18 Cemâziyelâhir 1448",
+ "ar_size": 50,
+ "tr_size": 38,
+ "slides": [
+  {
+   "kind": "photo",
+   "photo": "photos/025-yardim-eli.jpg",
+   "title": "Allah yolunda bir kamçı",
+   "subtitle": "Az da olsa, Allah için verilen kıymetlidir",
+   "credit": "Fotoğraf: Austin Kehmeier / Unsplash",
+   "focus": "center 70%",
+   "swipe": "Hadis-i şerifi okumak için kaydır  →"
+  },
+  {
+   "kind": "text"
+  }
+ ]
+}
