@@ -21,9 +21,9 @@ Kullanıcı genellikle bir hadis-i şerifin Arapça metnini, Türkçe mealini ve
 - Her reelde **farklı bir görsel**: kapak, Unsplash fotoğrafıdır (`"kind": "photo"`). Unsplash MCP ile ara, `download_asset` ile indir, `photos/<no>-<konu>.jpg` olarak kaydet.
 - Konuya uygun, edepli, İslami hassasiyete aykırı olmayan fotoğraf seç (başka dinlere ait ibadet sahneleri, kadın-erkek yakınlığı vb. olmasın).
 - Kapakta künye: `"credit": "Fotoğraf: <Ad> / Unsplash"`.
-- **Açık renk:** Hesap sahibi açık tonları istiyor; yalnızca **açık paletlerden** seç: `fildisi, kum, nane, gul, gokyuzu, lavanta` (zemin açık, yazılar siyah). Koyu paletleri (zumrut, gece, bordo …) kullanıcı istemedikçe kullanma.
-- **Kapak fotoğrafı koyu olabilir.** Koyu fotoğrafta kapak otomatik olarak koyu temaya geçer (koyu gölge, krem başlık, altın süs); orta/açık fotoğrafta açık tül ve siyah yazı kalır. Hadis metni karesi her zaman açık zemin, siyah yazı. Gerekirse kapak slaytına `"cover": "dark"` veya `"light"` yazarak elle seç.
-- Her gönderide açık paletlerden **daha önce kullanılmamış** olanı seç; README tablosundan kullanılanlara bak. Hepsi kullanıldıysa en uzun süredir kullanılmayanı seç.
+- **Renk:** Çoğunlukla **açık paletler** (zemin açık, yazılar siyah): `fildisi, kum, nane, gul, gokyuzu, lavanta`. Hesap sahibi **ara sıra koyu tema** da istiyor: kabaca her 4 gönderiden birinde (son 3 gönderi açıksa) ya da konu/fotoğraf koyuya uygunsa (gece, akşam, ahiret, tefekkür gibi) bir **koyu palet** seç: `zumrut, gece, seher, bordo, erguvan, firuze, toprak, zeytin, lacivert`. Koyu palette kartlar koyu zemin, açık renk yazı olur. Art arda iki koyu kullanma.
+- **Kapak fotoğrafı koyu olabilir.** Açık palette koyu fotoğraf seçilirse kapak otomatik olarak koyu temaya geçer (koyu gölge, krem başlık, altın süs); orta/açık fotoğrafta açık tül ve siyah yazı kalır. Açık palette hadis metni karesi açık zemin, siyah yazıdır. Gerekirse kapak slaytına `"cover": "dark"` veya `"light"` yazarak elle seç.
+- Paleti seçerken README tablosuna bak: o gruptan (açık ya da koyu) **daha önce kullanılmamış** olanı, hepsi kullanıldıysa **en uzun süredir kullanılmayanı** seç.
 
 ## Ses
 
