@@ -45,6 +45,7 @@ Her gönderi `posts/<id>.json` içinde `"palette"` ile kendi rengini seçer. Koy
 | 023 | Azı da haramdır | foto: karlı dağlardan inen berrak dere (Unsplash) | lavanta | "Laura" çello-piyano (Jamendo, CC BY) |
 | 024 | Allah’ın evleri: mescitler | foto: cami avlu kapısından kubbeye bakış (Unsplash) | fildisi | "Gentle Rain" flüt (Jamendo, CC BY) |
 | 025 | Allah yolunda bir kamçı (sadaka) | foto: birbirine uzanan iki el, açık gökyüzü (Unsplash) | kum | "White Beach" sakin new age (Jamendo, CC BY) |
+| 026 | Bilmemenin edebi | foto: açık zeminde eski kitap yığını (Unsplash) | nane | "Meditation at the Full Moon" (Jamendo, CC BY) |
 
 ## Fotoğraflı kapak (Unsplash)
 Kapak slaytında `"kind": "photo"` kullanılır: `photo` (photos/ altındaki dosya), `title`, `subtitle`, `credit` ("Fotoğraf: Ad Soyad / Unsplash"), isteğe bağlı `focus` (ör. "center 30%"). Fotoğraflar `images.unsplash.com`'dan indirilir; bu adres `hikmet-notlari` bulut ortamında izinlidir.

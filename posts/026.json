@@ -1,0 +1,27 @@
+{
+ "type": "hadis",
+ "palette": "nane",
+ "ambient_file": "audio/jamendo/1446225.mp3",
+ "ambient_start": 16,
+ "ambient_credit": "Müzik: “Meditation at the Full Moon”, Mark Subbotin / Jamendo (CC BY 3.0)",
+ "arabic": "عَنِ ابْنِ مَسْعُودٍ رَضِيَ اللهُ عَنْهُ قَالَ: مَنْ عَلِمَ فَلْيَقُلْ وَمَنْ لَمْ يَعْلَمْ فَلْيَقُلِ اللهُ أَعْلَمُ فَإِنَّ مِنَ الْعِلْمِ أَنْ يَقُولَ لِمَا لَا يَعْلَمُ لَا أَعْلَمُ.",
+ "turkish": "İbn-i Mes’ûd radıyallâhü anh’ten rivâyet olundu, o dedi ki: “**(Bir meseleyi) bilen kimse bildiğini söylesin. Bilmeyen “Allâhü a’lem” (en doğrusunu Allah bilir) desin. Zira kişinin bilmediği şeye ‘bilmiyorum’ demesi de bir ilimdir.**”",
+ "source": "Sahîh-i Buhârî",
+ "date": "28 Kasım 2026\n19 Cemâziyelâhir 1448",
+ "ar_size": 50,
+ "tr_size": 38,
+ "slides": [
+  {
+   "kind": "photo",
+   "photo": "photos/026-eski-kitaplar.jpg",
+   "title": "Bilmemenin edebi",
+   "subtitle": "“Bilmiyorum” demek de bir ilimdir",
+   "credit": "Fotoğraf: Priscilla Du Preez / Unsplash",
+   "focus": "center 60%",
+   "swipe": "Hadis-i şerifi okumak için kaydır  →"
+  },
+  {
+   "kind": "text"
+  }
+ ]
+}
